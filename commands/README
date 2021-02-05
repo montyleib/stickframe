@@ -1,0 +1,11 @@
+An empty __init__py must be added to tell Python to
+allow loadig of modules in this directory. 
+
+Currently having __init__.py causes problems with 
+auto-class loading in frmaing InitGui.py, the __init__.py
+has to be specificallay excluded.
+
+This folder is intended to contain the various commands for
+ the Framing Workbench. Commands located in this folder
+should be loaded automatically by the workbench.
+

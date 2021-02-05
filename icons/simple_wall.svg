@@ -1,0 +1,2515 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.2"
+   width="27.092487mm"
+   viewBox="0 0 270.92487 299.68298"
+   height="29.968298mm"
+   id="svg731"
+   sodipodi:docname="wall.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata735">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>FreeCAD SVG Export</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1680"
+     inkscape:window-height="1022"
+     id="namedview733"
+     showgrid="false"
+     inkscape:zoom="4.7509189"
+     inkscape:cx="51.639267"
+     inkscape:cy="49.71043"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg731"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <title
+     id="title2">FreeCAD SVG Export</title>
+  <desc
+     id="desc4">Drawing page: Page exported from FreeCAD document: Unnamed</desc>
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1553">
+      <rect
+         y="1008.4473"
+         x="1523.6256"
+         height="338.66666"
+         width="338.66666"
+         id="rect1555"
+         style="opacity:1;fill-opacity:1;stroke:#ffffff;stroke-width:4.68254662;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers" />
+    </clipPath>
+  </defs>
+  <g
+     id="Page"
+     clip-path="url(#clipPath1553)"
+     transform="matrix(0.88489069,0,0,0.88489069,-1348.2421,-892.36565)"
+     style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel">
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g8"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(0,2100)"
+       id="g10"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(0,2100)"
+       id="g12"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="scale(2.82319,2.82258)"
+       id="g14"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="scale(2.82319,2.82258)"
+       id="g16"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="scale(2.82319,2.82258)"
+       id="g18"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="scale(2.82319,2.82258)"
+       id="g20"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g22"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="scale(2.82319,2.82258)"
+       id="g24"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g26"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g28"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1375.48,1691.62)"
+       id="g30"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="matrix(0.353,0,0,0.353,1367.48,1744.48)"
+       id="g32"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="matrix(0.353,0,0,0.353,1367.48,1744.48)"
+       id="g34"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="matrix(0.353,0,0,0.353,1367.48,1744.48)"
+       id="g36"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="matrix(0.353,0,0,0.353,1367.48,1744.48)"
+       id="g38"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g40"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="matrix(0.353,0,0,0.353,1367.48,1744.48)"
+       id="g42"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="matrix(0.353,0,0,0.353,1367.48,1744.48)"
+       id="g44"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1375.48,1691.62)"
+       id="g46"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g48"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g52"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 341.25,110.825 v 15.554 l -862.105,497.737 -31.431,-18.147 V 590.415 L 80.8223,224.89 v -960.478 l 13.4704,-7.777 31.4313,18.147 v 924.184 l 26.94,-15.554 v -960.478 l 13.471,-7.777 31.431,18.147 v 924.184 l 26.94,-15.554 v -960.478 l 13.471,-7.777 31.431,18.147 V 116.01 l 26.94,-15.554 v -960.478 l 13.471,-7.777 31.431,18.147 v 960.477"
+         id="path50"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g54"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g56"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g58"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g60"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g62"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g64"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g68"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 255.937,160.08 v -960.477 l -31.431,-18.147 v 960.478 l 31.431,18.146"
+         id="path66"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g70"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g72"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g74"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g76"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g78"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g80"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g84"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 327.779,118.602 v -960.477 l -31.431,-18.147 v 960.478 l 31.431,18.146"
+         id="path82"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g86"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g88"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g90"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g92"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g94"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g96"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g100"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 184.095,201.558 v -960.477 l -31.431,-18.147 v 960.478 l 31.431,18.146"
+         id="path98"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g102"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g104"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g106"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g108"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g110"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g112"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g116"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="M 112.253,243.036 V -717.441 L 80.8223,-735.588 V 224.89 l 31.4307,18.146"
+         id="path114"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g118"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g120"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g122"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g124"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g126"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g128"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g132"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="M 112.253,243.036 80.8223,224.89 -552.286,590.415 l 31.431,18.146 633.108,-365.525"
+         id="path130"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g134"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g136"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g138"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g140"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g142"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g144"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g148"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 327.779,118.602 13.471,-7.777 v 15.554 l -862.105,497.737 v -15.555 l 633.108,-365.525 13.471,-7.777 58.371,-33.701 13.471,-7.777 58.371,-33.701 13.471,-7.777 58.371,-33.701"
+         id="path146"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g150"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g152"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g154"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g156"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g158"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g160"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g164"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 327.779,118.602 13.471,-7.777 v -960.477 l -13.471,7.777 v 960.477"
+         id="path162"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g166"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g168"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g170"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g172"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g174"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g176"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g180"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="M 269.408,152.303 V 116.01 -808.174 l -13.471,7.777 V 160.08 l 13.471,-7.777"
+         id="path178"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g182"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g184"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g186"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g188"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g190"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g192"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g196"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 125.724,235.259 v -36.293 -924.184 l -13.471,7.777 v 960.477 l 13.471,-7.777"
+         id="path194"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g198"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g200"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g202"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g204"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g206"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g208"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g212"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 197.566,193.781 v -36.293 -924.184 l -13.471,7.777 v 960.477 l 13.471,-7.777"
+         id="path210"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g214"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g216"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g218"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g220"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g222"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g224"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g228"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 184.095,201.558 -31.431,-18.146 -26.94,15.554 v 36.293 l 58.371,-33.701"
+         id="path226"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g230"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g232"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g234"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g236"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g238"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g240"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g244"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 327.779,118.602 -31.431,-18.146 -26.94,15.554 v 36.293 l 58.371,-33.701"
+         id="path242"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g246"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g248"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g250"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g252"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g254"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g256"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g260"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 255.937,160.08 -31.431,-18.146 -26.94,15.554 v 36.293 l 58.371,-33.701"
+         id="path258"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g262"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g264"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g266"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g268"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g270"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g272"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g276"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m -552.286,590.415 31.431,18.146 v 15.555 l -31.431,-18.147 v -15.554"
+         id="path274"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g278"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g280"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g282"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g284"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g286"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g288"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g292"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 112.253,-717.441 13.471,-7.777 -31.4313,-18.147 -13.4704,7.777 31.4307,18.147"
+         id="path290"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g294"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g296"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g298"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g300"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g302"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g304"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g308"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 255.937,-800.397 13.471,-7.777 -31.431,-18.147 -13.471,7.777 31.431,18.147"
+         id="path306"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g310"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g312"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g314"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g316"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g318"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g320"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g324"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 327.779,-841.875 13.471,-7.777 -31.431,-18.147 -13.471,7.777 31.431,18.147"
+         id="path322"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g326"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g328"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g330"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g332"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g334"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g336"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g340"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:#ffffff;fill-opacity:1;stroke:none">
+      <path
+         d="m 184.095,-758.919 13.471,-7.777 -31.431,-18.147 -13.471,7.777 31.431,18.147"
+         id="path338"
+         inkscape:connector-curvature="0"
+         style="vector-effect:non-scaling-stroke;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g342"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g344"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g346"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g348"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g350"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g352"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g356"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 112.253,243.036 80.8223,224.89"
+         id="path354"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g358"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g360"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g364"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 112.253,243.036 13.471,-7.777"
+         id="path362"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g366"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g368"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g372"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 112.253,-717.441 80.8223,-735.588"
+         id="path370"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g374"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g376"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g380"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 80.8223,-735.588 13.4704,-7.777"
+         id="path378"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g382"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g384"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g388"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 125.724,-725.218 94.2927,-743.365"
+         id="path386"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g390"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g392"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g396"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 112.253,-717.441 13.471,-7.777"
+         id="path394"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g398"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g400"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g404"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 112.253,243.036 V -717.441"
+         id="path402"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g406"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g408"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g412"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 80.8223,224.89 V -735.588"
+         id="path410"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g414"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g416"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g420"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 125.724,235.259 V -725.218"
+         id="path418"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g422"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g424"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g428"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 184.095,201.558 152.664,183.412"
+         id="path426"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g430"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g432"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g436"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 184.095,201.558 13.471,-7.777"
+         id="path434"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g438"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g440"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g444"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 184.095,-758.919 -31.431,-18.147"
+         id="path442"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g446"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g448"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g452"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 152.664,-777.066 13.471,-7.777"
+         id="path450"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g454"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g456"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g460"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 197.566,-766.696 -31.431,-18.147"
+         id="path458"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g462"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g464"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g468"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 184.095,-758.919 13.471,-7.777"
+         id="path466"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g470"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g472"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g476"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 184.095,201.558 V -758.919"
+         id="path474"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g478"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g480"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g484"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 152.664,183.412 V -777.066"
+         id="path482"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g486"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g488"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g492"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 197.566,193.781 V -766.696"
+         id="path490"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g494"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g496"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g500"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 255.937,160.08 224.506,141.934"
+         id="path498"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g502"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g504"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g508"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 255.937,160.08 13.471,-7.777"
+         id="path506"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g510"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g512"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g516"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 255.937,-800.397 -31.431,-18.147"
+         id="path514"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g518"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g520"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g524"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 224.506,-818.544 13.471,-7.777"
+         id="path522"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g526"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g528"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g532"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 269.408,-808.174 -31.431,-18.147"
+         id="path530"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g534"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g536"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g540"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 255.937,-800.397 13.471,-7.777"
+         id="path538"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g542"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g544"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g548"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 255.937,160.08 V -800.397"
+         id="path546"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g550"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g552"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g556"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 224.506,141.934 V -818.544"
+         id="path554"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g558"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g560"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g564"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 269.408,152.303 V -808.174"
+         id="path562"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g566"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g568"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g572"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 341.25,110.825 v 15.554"
+         id="path570"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g574"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g576"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g580"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m -552.286,590.415 31.431,18.146"
+         id="path578"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g582"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g584"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g588"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m -520.855,608.561 v 15.555"
+         id="path586"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g590"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g592"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g596"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m -552.286,605.969 31.431,18.147"
+         id="path594"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g598"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g600"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g604"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m -552.286,590.415 v 15.554"
+         id="path602"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g606"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g608"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g612"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 296.348,100.456 -26.94,15.554"
+         id="path610"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g614"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g616"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g620"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 224.506,141.934 -26.94,15.554"
+         id="path618"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g622"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g624"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g628"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 152.664,183.412 -26.94,15.554"
+         id="path626"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g630"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g632"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g636"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 80.8223,224.89 -552.286,590.415"
+         id="path634"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g638"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g640"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g644"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 341.25,110.825 -520.855,608.561"
+         id="path642"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g646"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g648"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g652"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 341.25,126.379 -520.855,624.116"
+         id="path650"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g654"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g656"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g660"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 327.779,118.602 296.348,100.456"
+         id="path658"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g662"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g664"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g668"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 327.779,118.602 13.471,-7.777"
+         id="path666"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g670"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g672"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g676"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 327.779,-841.875 -31.431,-18.147"
+         id="path674"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g678"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g680"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g684"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 296.348,-860.022 13.471,-7.777"
+         id="path682"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g686"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g688"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g692"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 341.25,-849.652 -31.431,-18.147"
+         id="path690"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g694"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g696"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g700"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="m 327.779,-841.875 13.471,-7.777"
+         id="path698"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g702"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g704"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g708"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 327.779,118.602 V -841.875"
+         id="path706"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g710"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g712"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g716"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 296.348,100.456 V -860.022"
+         id="path714"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g718"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g720"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g724"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:7;stroke-linecap:round;stroke-linejoin:bevel;stroke-opacity:1">
+      <path
+         d="M 341.25,110.825 V -849.652"
+         id="path722"
+         inkscape:connector-curvature="0"
+         style="vector-effect:none;fill-rule:evenodd" />
+    </g>
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       transform="translate(1485,1050)"
+       id="g726"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+    <g
+       font-weight="400"
+       font-style="normal"
+       font-size="31.75"
+       id="g728"
+       style="font-style:normal;font-weight:400;font-size:31.75px;font-family:'Noto Sans';fill:none;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1" />
+  </g>
+</svg>
