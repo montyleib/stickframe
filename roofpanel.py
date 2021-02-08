@@ -1,6 +1,6 @@
 import FreeCAD, FreeCADGui, Part, Draft
 import os, math
-
+import framing
 
 __title__="FreeCAD Framing"
 __author__ = "Paul C. Randall"
@@ -25,7 +25,8 @@ class RoofPanel_Command:
 	"""
 	def GetResources(self):
 
-		image_path = '/framing/icons/roofpanel.png'
+#		image_path = "/" + framing.mod_name + '/icons/roofpanel.png'
+		image_path = '/stickframe/icons/roofpanel.png'
 		global_path = FreeCAD.getHomePath()+"Mod"
 		user_path = FreeCAD.getUserAppDataDir()+"Mod"
 		icon_path = ""
@@ -136,7 +137,7 @@ class ViewProviderRoofPanel:
 		'''
 
 #		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-#		image_path = '/framing/icons/roofpanel_.png'
+#		image_path = '/stickframe/icons/roofpanel_.png'
 #		icon_string = open( user_path + image_path )
 #		print ( icon_string )
 

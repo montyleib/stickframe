@@ -1231,16 +1231,16 @@ static char * logo_xpm[] = {
 
 # This is an attempt at a command autoloader, to make adding commands easier.
 
-        cmds_path = FreeCAD.getUserAppDataDir()+"Mod/framing/commands"
+#        cmds_path = FreeCAD.getUserAppDataDir()+"Mod/framing/commands"
 
-        print(cmds_path)
-        listOfFiles = os.listdir(cmds_path)
-        pattern = "*.py"
-        for entry in listOfFiles:
-            if fnmatch.fnmatch(entry, pattern):
-                print(entry)
-                mod_name = entry.split(".")[0]
-                print("Module Name: ", mod_name)
+#        print(cmds_path)
+#        listOfFiles = os.listdir(cmds_path)
+#        pattern = "*.py"
+#        for entry in listOfFiles:
+#            if fnmatch.fnmatch(entry, pattern):
+#                print(entry)
+#                mod_name = entry.split(".")[0]
+#                print("Module Name: ", mod_name)
 #				com_name = str(mod_name).capitalize()
 #				print ( "Command Name: ",com_name )
 
@@ -1271,12 +1271,12 @@ static char * logo_xpm[] = {
 
 #        FreeCADGui.addCommand('Framing_PanelTools', PathCommandGroup(panelscmdlist, QtCore.QT_TRANSLATE_NOOP("Framing", 'Panel Types')))
 
-        import stud, plate, studspacer, floorjoist, ceilingjoist, rafter, collarbeam, ridgebeam, stringer, story
+        import stud #, plate, studspacer, floorjoist, ceilingjoist, rafter, collarbeam, ridgebeam, stringer, story
         import panel ,roofpanel, floorpanel, ceilingpanel
         import wall, simplewall, window, roof, door, ceiling
         import floor, wall, simplewall, window, roof, door, ceiling
         import header
-#        import joist_tool
+		#        import joist_tool
         import staircase
         import stringer_sketch
         import rafter_sketch
@@ -1293,7 +1293,7 @@ static char * logo_xpm[] = {
         self.appendToolbar("FramingReload", ["FramingReload"])
 
 
-        self.appendMenu("StickFrame", ["FloorPanel", "Floor", "Wall", "Window", "Door", "Ceiling", "RoofPanel", "Roof", "Stringer", "StairCase"])
+#        self.appendMenu("StickFrame", ["FloorPanel", "Floor", "Wall", "Window", "Door", "Ceiling", "RoofPanel", "Roof", "Stringer", "StairCase"])
 
         Log ("The StickFrame Module Initialize method has been run \n")
 

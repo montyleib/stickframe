@@ -1,6 +1,7 @@
 import FreeCAD,FreeCADGui,Part, Draft
 import os
 import math
+import framing
 
 __title__="FreeCAD Framing"
 __author__ = "Paul C. Randall"
@@ -33,7 +34,8 @@ class CeilingJoist_Command:
 
 	def GetResources(self):
 
-		image_path = '/framing/icons/ceilingjoist.png'
+#		image_path = "/" + framing.mod_name + '/icons/ceilingjoist.png'
+		image_path = '/stickframe/icons/ceilingjoist.png'
 		global_path = FreeCAD.getHomePath()+"Mod"
 		user_path = FreeCAD.getUserAppDataDir()+"Mod"
 		icon_path = ""

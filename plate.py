@@ -33,7 +33,8 @@ class Plate_Command:
 	"""
 	def GetResources(self):
 
-		image_path = '/framing/icons/plate.png'
+#		image_path = "/" + framing.mod_name + '/icons/plate.png'
+		image_path = '/stickframe/icons/plate.png'
 		global_path = FreeCAD.getHomePath()+"Mod"
 		user_path = FreeCAD.getUserAppDataDir()+"Mod"
 		icon_path = ""

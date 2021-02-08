@@ -25,7 +25,10 @@ class Stud_Command:
 	"""
 	def GetResources(self):
 
-		image_path = '/framing/icons/stud.png'
+#		image_path = "/" + framing.mod_name + '/icons/stud.png'
+		image_path = '/stickframe/icons/stud.png'
+		print( 'image path: ' + image_path )
+
 		global_path = FreeCAD.getHomePath()+"Mod"
 		user_path = FreeCAD.getUserAppDataDir()+"Mod"
 		icon_path = ""

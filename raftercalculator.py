@@ -13,7 +13,7 @@ __command_group__ = "Constructions" #Name of Toolbar to assign the command
 class RafterCalculator_Command:
 	def GetResources(slf):
 		#print 'Run getResources() for RafterCalculator_Command' 
-		image_path = '/framing/icons/raftercalculator.png' 
+		image_path = '/stickframe/icons/raftercalculator.png' 
 		global_path = FreeCAD.getHomePath()+'Mod' 
 		user_path = FreeCAD.getUserAppDataDir()+'Mod' 
 		icon_path = '' 

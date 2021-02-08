@@ -37,7 +37,8 @@ class Story_Command:
         #TODO: Move Icons to a resource file and all the path checking up to
         #		the framing class
 
-        image_path = '/framing/icons/story.png'
+		image_path = "/" + framing.mod_name + '/icons/story.png'
+#        image_path = '/stickframe/icons/story.png'
         global_path = FreeCAD.getHomePath() + "Mod"
         user_path = FreeCAD.getUserAppDataDir() + "Mod"
         icon_path = ""

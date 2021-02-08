@@ -22,7 +22,7 @@ def makeRafterSketch( name ):
 class Rafter_Sketch_Command:
 	def GetResources(slf):
 		#print 'Run getResources() for Rafter_Command' 
-		image_path = '/framing/icons/raftersketch.png' 
+		image_path = '/stickframe/icons/raftersketch.png' 
 		global_path = FreeCAD.getHomePath()+'Mod' 
 		user_path = FreeCAD.getUserAppDataDir()+'Mod' 
 		icon_path = '' 

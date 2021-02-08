@@ -1,5 +1,6 @@
 import FreeCAD, FreeCADGui, Part, Draft
 import os, math
+import framing
 
 __title__="FreeCAD Framing"
 __author__ = "Paul C. Randall"
@@ -26,7 +27,8 @@ class Ridgebeam_Command:
 	"""
 	def GetResources(self):
 
-		image_path = '/framing/icons/ridgebeam.png'
+#		image_path = "/" + framing.mod_name + '/icons/ridgebeam.png'
+		image_path = '/stickframe/icons/ridgebeam.png'
 		global_path = FreeCAD.getHomePath()+"Mod"
 		user_path = FreeCAD.getUserAppDataDir()+"Mod"
 		icon_path = ""
@@ -143,7 +145,7 @@ class ViewProviderRidgebeam:
 		'''
 
 		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		image_path = '/framing/icons/ridgebeam.png'
+		image_path = '/stickframe/icons/ridgebeam.png'
 		icon_string = open( user_path + image_path )
 		print ( icon_string )
 

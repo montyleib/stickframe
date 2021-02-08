@@ -2,6 +2,7 @@ import Sketcher
 import FreeCAD
 import FreeCAD,FreeCADGui,Part
 import os
+
 class JoistTool_Command:
 	def GetResources(self):
 #		print 'Run getResources() for JoistTool_Command' 

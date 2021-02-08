@@ -22,7 +22,8 @@ class Ceiling_Command:
 
 	def GetResources(self):
 
-		image_path = '/framing/icons/ceiling.png'
+		image_path = '/stickframe/icons/ceiling.png'
+#		image_path = "/" + framing.mod_name + '/icons/ceiling.png'
 		global_path = FreeCAD.getHomePath()+"Mod"
 		user_path = FreeCAD.getUserAppDataDir()+"Mod"
 		icon_path = ""

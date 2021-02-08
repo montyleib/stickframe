@@ -22,7 +22,8 @@ class Floor_Command:
 
 	def GetResources(self):
 
-		image_path = '/framing/icons/floor.png'
+#		image_path = "/" + framing.mod_name + '/icons/floor.png'
+		image_path = '/stickframe/icons/floor.png'
 		global_path = FreeCAD.getHomePath()+"Mod"
 		user_path = FreeCAD.getUserAppDataDir()+"Mod"
 		icon_path = ""

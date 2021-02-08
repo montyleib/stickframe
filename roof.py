@@ -18,7 +18,8 @@ class Roof_Command:
 
 	def GetResources(self):
 
-		image_path = '/framing/icons/roof.png'
+#		image_path = "/" + framing.mod_name + '/icons/roof.png'
+		image_path = '/stickframe/icons/roof.png'
 		global_path = FreeCAD.getHomePath()+"Mod"
 		user_path = FreeCAD.getUserAppDataDir()+"Mod"
 		icon_path = ""

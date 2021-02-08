@@ -1,6 +1,7 @@
 import FreeCAD,FreeCADGui,Part, Draft, Sketcher
 import os
 import stud, header
+import framing
 
 __title__="FreeCAD Framing"
 __author__ = "Paul C. Randall"
@@ -14,7 +15,9 @@ class Window_Command:
 	# Possibly check if stud is within window bound box if is set it to the sill height - 1.5"
 
 	def GetResources(self):
-		image_path = '/framing/icons/window.png' 
+
+#		image_path = "/" + framing.mod_name + '/icons/window.png'
+		image_path = '/stickframe/icons/window.png' 
 		global_path = FreeCAD.getHomePath()+'Mod' 
 		user_path = FreeCAD.getUserAppDataDir()+'Mod' 
 		icon_path = '' 

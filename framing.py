@@ -10,6 +10,7 @@ import plate
 #	ViewProviderStud(newstud.ViewObject)
 #	return newstud
 
+mod_name = "stickframe"
 
 def makePlate(name):
     newplate = plate.Plate_Command()

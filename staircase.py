@@ -1,5 +1,6 @@
 import FreeCAD,FreeCADGui,Part, Draft, Sketcher
 import os, math
+import framing
 
 __title__="FreeCAD Framing"
 __author__ = "Paul C. Randall"
@@ -13,7 +14,8 @@ class StairCase_Command:
 
 	def GetResources(self):
 
-		image_path = '/framing/icons/staircase.png'
+#		image_path = "/" + framing.mod_name + '/icons/staircase.png'
+		image_path = '/stickframe/icons/staircase.png'
 		global_path = FreeCAD.getHomePath()+"Mod"
 		user_path = FreeCAD.getUserAppDataDir()+"Mod"
 		icon_path = ""

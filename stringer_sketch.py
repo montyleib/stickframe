@@ -25,7 +25,7 @@ def makeStringerSketch( name ):
 class Stringer_Sketch_Command:
 	def GetResources(self):
 		#print 'Run getResources() for Stringer_Sketch_Command' 
-		image_path = '/framing/icons/stringer_sketch.png' 
+		image_path = '/stickframe/icons/stringer_sketch.png' 
 		global_path = FreeCAD.getHomePath()+'Mod' 
 		user_path = FreeCAD.getUserAppDataDir()+'Mod' 
 		icon_path = '' 

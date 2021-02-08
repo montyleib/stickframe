@@ -10,7 +10,7 @@ from importlib import reload
 class FramingReload_Command:
 
     def GetResources(self):
-        image_path = '/framing/icons/reload.png'
+        image_path = '/stickframe/icons/reload.png'
         global_path = FreeCAD.getHomePath()+"Mod"
         user_path = FreeCAD.getUserAppDataDir()+"Mod"
         icon_path = ""

@@ -1,6 +1,7 @@
 import FreeCAD, FreeCADGui, Part, Draft
 import os
 import math
+import framing
 
 import stringer_sketch
 
@@ -30,7 +31,8 @@ class Stringer_Command:
 
 	def GetResources(self):
 
-		image_path = '/framing/icons/stringer.png'
+#		image_path = "/" + framing.mod_name + '/icons/stringer.png'
+		image_path = '/stickframe/icons/stringer.png'
 		global_path = FreeCAD.getHomePath()+"Mod"
 		user_path = FreeCAD.getUserAppDataDir()+"Mod"
 		icon_path = ""

@@ -4,6 +4,7 @@ import Part
 import Draft
 import os
 import math
+import framing
 
 
 __title__="FreeCAD Framing"
@@ -28,7 +29,8 @@ class Studspacer_Command:
 	"""
 	def GetResources(self):
 
-		image_path = '/framing/icons/studspacer.png'
+#		image_path = "/" + framing.mod_name + '/icons/studspacer.png'
+		image_path = '/stickframe/icons/studspacer.png'
 		global_path = FreeCAD.getHomePath()+"Mod"
 		user_path = FreeCAD.getUserAppDataDir()+"Mod"
 		icon_path = ""
@@ -143,7 +145,7 @@ class ViewProviderStudspacer:
 		'''
 
 #		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-#		image_path = '/framing/icons/studspacer.png'
+#		image_path = '/stickframe/icons/studspacer.png'
 #		icon_string = open( user_path + image_path )
 #		print ( icon_string )
 

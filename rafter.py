@@ -6,6 +6,7 @@ import Sketcher
 import os
 
 import rafter_sketch
+import framing
 
 __title__ = "FreeCAD Stick Framers Toolkit"
 __author__ = "Paul Randall"
@@ -48,7 +49,8 @@ def makeRafter(name):
 class Rafter_Command:
 	def GetResources(self):
 
-		image_path = '/framing/icons/rafter.png'
+#		image_path = "/" + framing.mod_name + '/icons/rafter.png'
+		image_path = '/stickframe/icons/rafter.png'
 		global_path = FreeCAD.getHomePath()+'Mod'
 		user_path = FreeCAD.getUserAppDataDir()+'Mod'
 		icon_path = ''

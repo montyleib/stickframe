@@ -13,7 +13,9 @@ __command_group__ = "Constructions"
 class Door_Command:
 	def GetResources(slf):
 #		print 'Run getResources() for Door_Command' 
-		image_path = '/framing/icons/door.png' 
+
+#		image_path = "/" + framing.mod_name + '/icons/door.png'
+		image_path = '/stickframe/icons/door.png' 
 		global_path = FreeCAD.getHomePath()+'Mod' 
 		user_path = FreeCAD.getUserAppDataDir()+'Mod' 
 		icon_path = '' 
