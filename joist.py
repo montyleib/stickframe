@@ -40,8 +40,6 @@ class FloorJoist_Command:
 class FloorJoist():
 
 	def __init__(self, obj):
-		#Add options for various pre-cuts ( Using 92 5/8, 92.625 inches, 2352.68 mm  )
-
 		obj.addProperty("App::PropertyLength","Length","Dimension","Change the length of the Joist").Length = "96 in"
 
 		obj.addProperty("App::PropertyFloat","Cost","Member","Enter the cost of the construction member").Cost = 2.99

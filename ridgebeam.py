@@ -70,7 +70,7 @@ class Ridgebeam():
 
 #		print ("Class Variable :Initial placement: ", self.ridgebeam_placement )
 
-		precuts = ['92.25 in', '92.625 in', '93 in','96 in', '104.625 in', '116 5/8 in']
+		precuts = ['92.25 in', '92.625 in', '93 in','96 in', '104.625 in', '116.625 in']
 		centers = ['15.25 in', '16 in', '18 in', '24 in']
 
 		obj.addProperty("App::PropertyLength", "Length", "Lumber Dimension","Change the length of the Ridgebeam").Length = 2352.68

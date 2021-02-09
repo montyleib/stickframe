@@ -14,7 +14,7 @@ def makeStud(name):
 	newstud = FreeCAD.ActiveDocument.addObject("Part::FeaturePython", name )
 	Stud(newstud)
 	ViewProviderStud(newstud.ViewObject)
-	newstud.Placement = FreeCAD.Placement( FreeCAD.Vector (38.1, 88.89, 0.0),FreeCAD.Rotation (0.0, 0.0, 0.7071067811865476, -0.7071067811865476) )  
+	newstud.Placement = FreeCAD.Placement( FreeCAD.Vector (38.1, 88.89, 0.0),FreeCAD.Rotation (0.0, 0.0, 0.7071, -0.7071) )  
 	FreeCAD.ActiveDocument.recompute()
 	return newstud
 
@@ -52,7 +52,7 @@ class Stud_Command:
 		newstud = FreeCAD.ActiveDocument.addObject("Part::FeaturePython","Stud")
 		Stud(newstud)
 
-		newstud.Placement = FreeCAD.Placement( FreeCAD.Vector (38.1, 88.89, 0.0),FreeCAD.Rotation (0.0, 0.0, 0.7071067811865476, -0.7071067811865476) ) 
+		newstud.Placement = FreeCAD.Placement( FreeCAD.Vector (38.1, 88.89, 0.0),FreeCAD.Rotation (0.0, 0.0, 0.7071, -0.7071) ) 
 
 		ViewProviderStud(newstud.ViewObject)
 		FreeCAD.ActiveDocument.recompute()
@@ -77,7 +77,7 @@ class Stud():
 #		print ( "Placement from obj in Stud __init__: ", obj.Placement )
 #		print ( "Placement from self in Stud __init__: ", self.Placement )
 
-		precuts = ['92.25 in', '92.625 in', '93 in','96 in', '104.625 in', '116 5/8 in']
+		precuts = ['92.25 in', '92.625 in', '93 in','96 in', '104.625 in', '116.625 in']
 		centers = ['15.25 in', '16 in', '18 in', '24 in']
 
 		obj.addProperty("App::PropertyLength","Length","Lumber Dimension","The board foot length ( cut length ) dimension").Length = "92.625 in"
