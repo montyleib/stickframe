@@ -13,7 +13,6 @@ def makePanel( name ):
 	newroofpanel = FreeCAD.ActiveDocument.addObject("Part::FeaturePython", name )
 	RoofPanel(newroofpanel)
 	ViewProviderRoofPanel(newroofpanel.ViewObject)
-#	newroofpanel.Placement =  FreeCAD.Placement( FreeCAD.Vector (0.0, 343.58387867060003, 5019.7094452641),FreeCAD.Rotation (0.9238795325112866, 0.0, 0.0, 0.38268343236509006) )	
 	newroofpanel.Placement = FreeCAD.Placement( FreeCAD.Vector (-5.27108755472, 531.8184415216, 2229.21),FreeCAD.Rotation (0.9238795325112866, 0.0, 0.0, 0.38268343236509006) )
 	FreeCAD.ActiveDocument.recompute()
 	
@@ -24,17 +23,19 @@ class RoofPanel_Command:
 	The RoofPanel_Command class integrates the roofsheath object into the FreeCAD Workbench, StickFrame
 	"""
 	def GetResources(self):
+		icon_path = framing.getIconImage( "roofpanel" ) 	
+
 
 #		image_path = "/" + framing.mod_name + '/icons/roofpanel.png'
-		image_path = '/stickframe/icons/roofpanel.png'
-		global_path = FreeCAD.getHomePath()+"Mod"
-		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		icon_path = ""
+		# image_path = '/stickframe/icons/roofpanel.png'
+		# global_path = FreeCAD.getHomePath()+"Mod"
+		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
+		# icon_path = ""
 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {"MenuText": "RoofPanel",
 				"ToolTip": "Add a Roof Sheath to the Construction",
 				'Pixmap': str(icon_path)}
@@ -52,7 +53,7 @@ class RoofPanel_Command:
 #		newobj.Placement =  FreeCAD.Placement( FreeCAD.Vector (0.0, 343.58387867060003, 5019.7094452641),FreeCAD.Rotation (0.9238795325112866, 0.0, 0.0, 0.38268343236509006) )
 		newobj.Placement = FreeCAD.Placement( FreeCAD.Vector (-5.27108755472, 531.8184415216, 2229.21),FreeCAD.Rotation (0.9238795325112866, 0.0, 0.0, 0.38268343236509006) )
 
-
+		framing.defaultAttachment( newobj )
 		ViewProviderRoofPanel(newobj.ViewObject)	
 		FreeCAD.ActiveDocument.recompute()
 
@@ -75,7 +76,7 @@ class RoofPanel():
 		obj.addProperty("App::PropertyEnumeration", "Function", "Member", "Where this member is being used").Function = ['1st Floor', '2nd Floor', '3rd Floor','4th Floor']
 		obj.addProperty("App::PropertyString", "MemberName", "Member","Where this member is being used").MemberName = "RoofPanel"
 		obj.Proxy = self
-#		obj.addExtension('Part::AttachExtensionPython', obj)
+		obj.addExtension('Part::AttachExtensionPython')
 
 	def onChanged(self, fp, prop):
 		if prop == "Length" or prop == "Width" or prop == "Height":
@@ -85,18 +86,9 @@ class RoofPanel():
 
 
 	def execute(self, fp):
-		#Using the PNT arguement you can position the origin of the shape.
-		#if the object has already been created, retrieve the current placement b4 re-creating
-		#otherwise the fp ( featurepython ) object gets reset to 0,0,0 or whatever is in below commands
 		fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height, FreeCAD.Vector(0,0,0),FreeCAD.Vector(0,0,1 ) )
+		fp.positionBySupport()
 
-
-#		print ( "Object Placement:", fp.Placement )
-#		fp.Placement = self.RoofPanel.placement
-#		print ( "Object Placement:", fp.Placement )
-
-		fp.recompute()
-#		print ("Floor Panel execute(d)")
 		
 
 class ViewProviderRoofPanel:

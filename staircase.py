@@ -13,17 +13,18 @@ floor_levels = ['None','Basement','1st Floor','Second Floor', 'Third Floor', 'At
 class StairCase_Command:
 
 	def GetResources(self):
+		icon_path = framing.getIconImage( "staircase" ) 	
 
 #		image_path = "/" + framing.mod_name + '/icons/staircase.png'
-		image_path = '/stickframe/icons/staircase.png'
-		global_path = FreeCAD.getHomePath()+"Mod"
-		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		icon_path = ""
+		# image_path = '/stickframe/icons/staircase.png'
+		# global_path = FreeCAD.getHomePath()+"Mod"
+		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
+		# icon_path = ""
 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {"MenuText": "StairCase",
                     "ToolTip": "Add a Stair Case to the Construction",
                     'Pixmap': str(icon_path)}

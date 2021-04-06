@@ -17,17 +17,18 @@ class Roof_Command:
 	"""
 
 	def GetResources(self):
+		icon_path = framing.getIconImage( "roof" ) 	
 
 #		image_path = "/" + framing.mod_name + '/icons/roof.png'
-		image_path = '/stickframe/icons/roof.png'
-		global_path = FreeCAD.getHomePath()+"Mod"
-		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		icon_path = ""
+		# image_path = '/stickframe/icons/roof.png'
+		# global_path = FreeCAD.getHomePath()+"Mod"
+		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
+		# icon_path = ""
 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {"MenuText": "Roof",
 			"ToolTip": "Add a Roof Group to the Construction",
 			'Pixmap' : str(icon_path) }
@@ -44,7 +45,7 @@ class Roof_Command:
 
 		partobj.addProperty("App::PropertyLength", "Length", "Assembly Dimension","Change the overall length of the Roof").Length = "3352.800"
 		partobj.addProperty("App::PropertyLength", "Width", "Assembly Dimension","Change the overall width of the Roof").Width = "2743.2"
-#		partobj.addExtension('Part::AttachExtensionPython', partobj)
+		partobj.addExtension('Part::AttachExtensionPython' )
 
 		partobj.Placement = FreeCAD.Placement( FreeCAD.Vector ( 0 ,0, 2006)  ,FreeCAD.Rotation ( 0, 0, 0, 0) )
 
@@ -58,14 +59,22 @@ class Roof_Command:
 		expressionslist = []
 		expressions = []
 
-
 		if framing.isItemSelected():
-			selection = FreeCADGui.Selection.getSelection()
+			selection = FreeCADGui.Selection.getSelectionEx()
+			obj = selection[0].SubElementNames
+			edge_name = obj[0]
 
 			#One Edge
-			edge = FreeCADGui.Selection.getSelection()[0].Shape
-			if 	isinstance( edge, Part.Wire ):	
-				partobj.Length = edge.Length
+			edge_obj = FreeCADGui.Selection.getSelection()[0]
+			edge_shp = FreeCADGui.Selection.getSelection()[0].Shape
+			
+
+			edge_elt = FreeCADGui.Selection.getSelection ()[0].Shape.Edge1
+
+			if 	isinstance( edge_shp, Part.Wire ):	
+				partobj.Length = edge_elt.Length
+				FreeCAD.ActiveDocument.getObject(partobj.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
+				FreeCAD.ActiveDocument.getObject(partobj.Name).MapMode = 'OXY'
 
 
 		#calculate # of boards and positions
@@ -178,6 +187,7 @@ class Roof:
 		''' Do something here '''
 
 	def execute(self,fp):
+		fp.positionBySupport()
 		fp.recompute()
 
 

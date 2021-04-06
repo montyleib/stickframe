@@ -2,6 +2,7 @@ import Sketcher
 import FreeCAD
 import FreeCAD,FreeCADGui,Part, Draft
 import os
+import framing
 
 __title__="FreeCAD Stick Framers Toolkit"
 __author__ = "Paul Randall"
@@ -24,16 +25,18 @@ def makeStringerSketch( name ):
 
 class Stringer_Sketch_Command:
 	def GetResources(self):
-		#print 'Run getResources() for Stringer_Sketch_Command' 
-		image_path = '/stickframe/icons/stringer_sketch.png' 
-		global_path = FreeCAD.getHomePath()+'Mod' 
-		user_path = FreeCAD.getUserAppDataDir()+'Mod' 
-		icon_path = '' 
+		#print 'Run getResources() for Stringer_Sketch_Command'
+		icon_path = framing.getIconImage( "stringer_sketch" ) 	
+		
+		# image_path = '/stickframe/icons/stringer_sketch.png' 
+		# global_path = FreeCAD.getHomePath()+'Mod' 
+		# user_path = FreeCAD.getUserAppDataDir()+'Mod' 
+		# icon_path = '' 
 
-		if os.path.exists(user_path + image_path): 
-			icon_path = user_path + image_path 
-		elif os.path.exists(global_path + image_path): 
-			icon_path = global_path + image_path 
+		# if os.path.exists(user_path + image_path): 
+		# 	icon_path = user_path + image_path 
+		# elif os.path.exists(global_path + image_path): 
+		# 	icon_path = global_path + image_path 
 		return {'MenuText': 'Stringer_Sketch', 
 			'ToolTip': 'Tooltip for Stringer_Sketch command', 
 			'Pixmap' : str(icon_path) }  

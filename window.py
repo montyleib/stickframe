@@ -15,17 +15,19 @@ class Window_Command:
 	# Possibly check if stud is within window bound box if is set it to the sill height - 1.5"
 
 	def GetResources(self):
+		icon_path = framing.getIconImage( "window" ) 	
+
 
 #		image_path = "/" + framing.mod_name + '/icons/window.png'
-		image_path = '/stickframe/icons/window.png' 
-		global_path = FreeCAD.getHomePath()+'Mod' 
-		user_path = FreeCAD.getUserAppDataDir()+'Mod' 
-		icon_path = '' 
+		# image_path = '/stickframe/icons/window.png' 
+		# global_path = FreeCAD.getHomePath()+'Mod' 
+		# user_path = FreeCAD.getUserAppDataDir()+'Mod' 
+		# icon_path = '' 
 
-		if os.path.exists(user_path + image_path): 
-			icon_path = user_path + image_path 
-		elif os.path.exists(global_path + image_path): 
-			icon_path = global_path + image_path 
+		# if os.path.exists(user_path + image_path): 
+		# 	icon_path = user_path + image_path 
+		# elif os.path.exists(global_path + image_path): 
+		# 	icon_path = global_path + image_path 
 		return {'MenuText': 'Window', 
 			'ToolTip': 'Add a window rough out to the construction.', 
 			'Pixmap' : str(icon_path) }  
@@ -50,17 +52,23 @@ class Window_Command:
 		partobj = FreeCAD.ActiveDocument.addObject('App::Part','Window')
 		partobj.addProperty("App::PropertyLength", "Length", "Assembly Dimension","Change the overall Length of the window assembly").Length = "8 ft"
 		partobj.addProperty("App::PropertyLength", "Height", "Assembly Dimension","Change the overall Height of the window assembly").Height = "8 ft"
+		partobj.addExtension('Part::AttachExtensionPython')
 
 
-#		partobj.addExtension('Part::AttachExtensionPython', partobj)
 
 		b=FreeCAD.ActiveDocument.addObject('Sketcher::SketchObjectPython','WindowSketch') 
 		b.Placement = FreeCAD.Placement(FreeCAD.Vector(0.000000,0.000000,0.000000),FreeCAD.Rotation(-0.707107,0.000000,0.000000,-0.707107))
 		newsampleobject = WindowSketch(b) 
 
 		partobj.addObject ( b )
+
+		framing.defaultAttachment( partobj )
+
 		b.ViewObject.Proxy=0 
 		FreeCAD.ActiveDocument.recompute()  
+
+
+
 
 		names = []
 		lengths = []
@@ -105,20 +113,31 @@ class Window_Command:
 
 #Placement [Pos=(0,50.825,2095.5), Yaw-Pitch-Roll=(0,0,0)]
 
-		placements.append( FreeCAD.Vector (0, 0, 850.9)  )
-		placements.append( FreeCAD.Vector (0, 50.825, 2095.5)  )
-		placements.append( FreeCAD.Vector (0, 0, 2095.5)  )
+		placements.append( FreeCAD.Vector (76.20000000000003, -1.1964104535170369e-14, 774.6999999999999)  )
+
+		placements.append( FreeCAD.Vector (38.1, 50.825, 2057.4)  )
+		placements.append( FreeCAD.Vector (38.1, 0, 2057.4)  )
 
 
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
-		rotations.append ( FreeCAD.Rotation (0.5, 0.5, 0.5, 0.5) )
+		#rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
+		
+		#rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+		#rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+		#rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+		#rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+		#rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+		#rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+		#rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+		
+		rotations.append ( FreeCAD.Rotation (0.7071067811865476, 5.551115123125784e-17,  0.7071067811865476,  5.551115123125784e-17) )
 		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.0, 1.0) )
 		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.0, 1.0) )
 
@@ -197,9 +216,9 @@ class WindowSketch:
 
 
 	def execute(self,fp):	
-		#fp.Placement.multiply( FreeCAD.Placement( FreeCAD.Vector(0,0,0),FreeCAD.Vector(0,0,90) )  )
+		fp.positionBySupport()
 		fp.recompute()
-#		print ' Window Class executed()'
+
 
 class ViewProviderWindow:
 	def __init__(self, obj):

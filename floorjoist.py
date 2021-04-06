@@ -1,6 +1,5 @@
 import FreeCAD,FreeCADGui,Part, Draft
-import os
-import math
+import os, math
 import framing
 
 __title__="FreeCAD Framing"
@@ -10,15 +9,13 @@ __url__ = "http://www.freecad.info"
 __command_name__ = "FloorJoist"
 __command_group__ = "Members"
 
-
 def makeFloorJoist( name ):
 	newjoist = FreeCAD.ActiveDocument.addObject("Part::FeaturePython", name )
 	FloorJoist(newjoist)
 	ViewProviderFloorJoist(newjoist.ViewObject)	
-	newjoist.Placement = FreeCAD.Placement( FreeCAD.Vector (2e-12, 88.9, -206.37),FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5 ) )
+#	newjoist.Placement = FreeCAD.Placement( FreeCAD.Vector (2e-12, 88.9, -206.37),FreeCAD.Rotation (0.0, 0.0, 0.0, 0.0 ) )
 	FreeCAD.ActiveDocument.recompute()
 	return newjoist
-	
 
 class FloorJoist_Command:
 	"""
@@ -27,19 +24,22 @@ class FloorJoist_Command:
 	"""
 	def GetResources(self):
 
+		icon_path = framing.getIconImage( "floorjoist" ) 	
+
+
 #		image_path = "/" + framing.mod_name + '/icons/floorjoist.png'
-		image_path = '/stickframe/icons/floorjoist.png'
-		global_path = FreeCAD.getHomePath()+"Mod"
-		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		icon_path = ""
-		 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# image_path = '/stickframe/icons/floorjoist.png'
+		# global_path = FreeCAD.getHomePath()+"Mod"
+		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
+		# icon_path = ""
+
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {"MenuText": "Joist",
 			"ToolTip": "Add a Floor Joist to the Construction",
-			'Pixmap' : str(icon_path) } 
+			'Pixmap': str(icon_path)}
 
 	def IsActive(self):
 		if FreeCAD.ActiveDocument == None:
@@ -48,54 +48,72 @@ class FloorJoist_Command:
 			return True
 
 	def Activated(self):
-
-
-
-		#newjoist = FreeCAD.ActiveDocument.addObject("App::DocumentObjectGroupPython", "FloorJoist")
 		newjoist = FreeCAD.ActiveDocument.addObject("Part::FeaturePython", "FloorJoist")
+		FloorJoist(newjoist)
+
+		if framing.isItemSelected():
+			selection = FreeCADGui.Selection.getSelectionEx()
+			obj = selection[0].SubElementNames
+			edge_name = obj[0]
+
+			#One Edge
+			edge_obj = FreeCADGui.Selection.getSelection()[0]
+			edge_shp = FreeCADGui.Selection.getSelection()[0].Shape
+			edge_elt = FreeCADGui.Selection.getSelection ()[0].Shape.Edge1
+
+			if isinstance( edge_shp, Part.Wire ):	
+				#FreeCAD.ActiveDocument.getObject(newjoist.Name).Length = edge_elt.Length
+				FreeCAD.ActiveDocument.getObject(newjoist.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
+				FreeCAD.ActiveDocument.getObject(newjoist.Name).MapMode = 'OYX'
+
+			if 	isinstance( edge_shp, Part.Compound ):
+				#FreeCAD.ActiveDocument.getObject(newjoist.Name).Length = edge_elt.Length	
+				FreeCAD.ActiveDocument.getObject(newjoist.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
+				FreeCAD.ActiveDocument.getObject(newjoist.Name).MapMode = 'OYX'
+
+#		newjoist.Placement = FreeCAD.Placement( FreeCAD.Vector (0,88.9, -206.37),FreeCAD.Rotation (0.0, -0.0, 0.0, 0.0) )
+		newjoist.Placement = FreeCAD.Placement( FreeCAD.Vector (0,0,0),FreeCAD.Rotation (0.0,0.0, 1, 0.0) )
 
 		ViewProviderFloorJoist(newjoist.ViewObject)
-		FloorJoist(newjoist)
-		newjoist.Placement = FreeCAD.Placement( FreeCAD.Vector (2e-12,88.9, -206.37),FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
-
-		
 		FreeCAD.ActiveDocument.recompute()
-		FreeCADGui.SendMsgToActiveView("ViewFit")
+		FreeCADGui.SendMsgToActiveView("ViewFit")	
+		FreeCADGui.activeDocument().activeView().viewIsometric()
 
 class FloorJoist():
 	"""
 	The FloorJoist Class defines the graphical representation of the framing member and its underlying shape.
 	"""
-
-	#Placement = FreeCAD.Placement()
+	Placement = FreeCAD.Placement
 
 	def __init__(self, obj):
 
-#		self.Placement = obj.Placement
+		precuts = ['92.25 in', '92.625 in', '93 in','96 in', '104.625 in', '116.625 in']
+		centers = ['15.25 in', '16 in', '18 in', '24 in']
 
 		obj.addProperty("App::PropertyLength","Length","Lumber Dimension","Change the length of the Joist").Length = "96 in"
 		obj.addProperty("App::PropertyLength","Width","Lumber Dimension","Lumber Edge Dimension").Width="1.5 in"
 		obj.addProperty("App::PropertyLength","Height","Lumber Dimension", "Lumber Face Dimension").Height="7.5 in"
 		obj.addProperty("App::PropertyLength","Centers","Construction Dimensison", "Construction Dimension").Centers="16 in"
-		obj.setEditorMode("Centers", 1)
 
 		obj.addProperty("App::PropertyFloat","Cost","Member","Enter the cost of the construction member").Cost = 2.99
 		obj.addProperty("App::PropertyEnumeration","Function","Member","Where this member is being used").Function = ['Floor Joist', 'Rim Joist']
 		obj.addProperty("App::PropertyString","MemberName","Member","Where this member is being used").MemberName = "Joist"
 		obj.Proxy = self
 
-#		obj.addExtension('Part::AttachExtensionPython', obj)
-		
+		obj.addExtension('Part::AttachExtensionPython' )
+
 	def onChanged(self, fp, prop):
-		if prop == "Length" or prop == "Width" or prop == "Height":
-			#self.Placement = self.Placement.multiply ( fp.Placement )			
-			#fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height)
-			FreeCAD.ActiveDocument.recompute()			
-			pass
+		if prop == "Length" or prop == "Width" or prop == "Height" and prop > 0:
+			FreeCAD.ActiveDocument.recompute()
+		if prop == "Function":
+			if fp.Function == "Rim":
+				pass
+			if fp.Function == "Joist":
+				pass
 
 	def execute(self,fp):
-		fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height, FreeCAD.Vector(0,0,38.10),FreeCAD.Vector(1,0,0 ) )
-		fp.recompute()
+		fp.Shape = Part.makeBox(fp.Width,fp.Length,fp.Height, FreeCAD.Vector(0,0,0),FreeCAD.Vector(0,0,1 ) )
+		fp.positionBySupport()
 
 
 class ViewProviderFloorJoist:

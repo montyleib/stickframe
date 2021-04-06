@@ -33,17 +33,19 @@ class CeilingJoist_Command:
 	"""
 
 	def GetResources(self):
+		icon_path = framing.getIconImage( "ceilingjoist" ) 	
+
 
 #		image_path = "/" + framing.mod_name + '/icons/ceilingjoist.png'
-		image_path = '/stickframe/icons/ceilingjoist.png'
-		global_path = FreeCAD.getHomePath()+"Mod"
-		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		icon_path = ""
+		# image_path = '/stickframe/icons/ceilingjoist.png'
+		# global_path = FreeCAD.getHomePath()+"Mod"
+		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
+		# icon_path = ""
 		 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {"MenuText": "Joist",
 			"ToolTip": "Add a Ceiling Joist to the Construction",
 			'Pixmap' : str(icon_path) } 
@@ -60,10 +62,13 @@ class CeilingJoist_Command:
 		ViewProviderCeilingJoist(newjoist.ViewObject)
 		CeilingJoist( newjoist )
 
+		framing.defaultAttachment( newjoist )
+
 		newjoist.Placement = FreeCAD.Placement( FreeCAD.Vector (50.79, 88.89, 2466.98),FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
 
 		FreeCAD.ActiveDocument.recompute()
 		FreeCADGui.SendMsgToActiveView("ViewFit")	
+		FreeCADGui.activeDocument().activeView().viewIsometric()
 
 class CeilingJoist():
 
@@ -84,7 +89,7 @@ class CeilingJoist():
 		obj.addProperty("App::PropertyString","MemberName","Member","Where this member is being used").MemberName = "Joist"
 		obj.Proxy = self
 
-#		obj.addExtension('Part::AttachExtensionPython', obj)
+		obj.addExtension('Part::AttachExtensionPython')
  
 		newjoist = FreeCAD.ActiveDocument.addObject("Part::FeaturePython", "CeilingJoistBoard")
 		joist = Part.makeBox(obj.Length,obj.Width,obj.Height, FreeCAD.Vector(0,0,0),FreeCAD.Vector(0,0,1 ) )
@@ -112,8 +117,8 @@ class CeilingJoist():
 # 		TODO: Change to address the actual object created and set to false
 #		FreeCADGui.ActiveDocument.CeilingJoist.Visibility = True
 		obj.ViewObject.Visibility = True
-
 		FreeCAD.ActiveDocument.recompute()
+
 		
 	def onChanged(self, fp, prop):
 
@@ -132,7 +137,11 @@ class CeilingJoist():
 	def execute(self,fp):
 
 #		fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height, FreeCAD.Vector(0,0,0),FreeCAD.Vector(1,0,0 ) )
-		fp.recompute()
+		fp.positionBySupport()
+
+		
+		FreeCAD.ActiveDocument.recompute()
+		#fp.recompute()
 
 class ViewProviderCeilingJoist:
 	def __init__(self, obj):

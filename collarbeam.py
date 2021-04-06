@@ -28,17 +28,19 @@ class CollarBeam_Command:
 	"""
 
 	def GetResources(self):
+		icon_path = framing.getIconImage( "collartie" ) 	
+
 
 #		image_path = "/" + framing.mod_name + '/icons/collartie.png'
-		image_path = '/stickframe/icons/collartie.png'
-		global_path = FreeCAD.getHomePath()+"Mod"
-		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		icon_path = ""
+		# image_path = '/stickframe/icons/collartie.png'
+		# global_path = FreeCAD.getHomePath()+"Mod"
+		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
+		# icon_path = ""
 		 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {"MenuText": "Collar Beam",
 			"ToolTip": "Add a Collar Beam to the Construction",
 			'Pixmap' : str(icon_path) } 
@@ -350,5 +352,5 @@ class ViewProviderCollarBeam:
 		return None
 
 
-FreeCADGui.addCommand('Collar Beam', CollarBeam_Command())
+FreeCADGui.addCommand('CollarBeam', CollarBeam_Command())
 

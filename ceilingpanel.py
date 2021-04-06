@@ -22,17 +22,19 @@ class CeilingPanel_Command:
 	The CeilingPanel_Command class integrates the ceiling panel object into the FreeCAD Workbench, StickFrame
 	"""
 	def GetResources(self):
+		icon_path = framing.getIconImage( "ceilingpanel" ) 	
+
 
 #		image_path = "/" + framing.mod_name + '/icons/ceilingpanel.png'
-		image_path = '/stickframe/icons/ceilingpanel.png'
-		global_path = FreeCAD.getHomePath()+"Mod"
-		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		icon_path = ""
+		# image_path = '/stickframe/icons/ceilingpanel.png'
+		# global_path = FreeCAD.getHomePath()+"Mod"
+		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
+		# icon_path = ""
 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {"MenuText": "CeilingPanel",
 				"ToolTip": "Add a Ceiling Panel to the Construction",
 				'Pixmap': str(icon_path)}
@@ -44,9 +46,13 @@ class CeilingPanel_Command:
 			return True
 
 	def Activated(self):
+
+
 		newobj = FreeCAD.ActiveDocument.addObject("Part::FeaturePython", "CeilingPanel")
 		newobj.Placement = FreeCAD.Placement( FreeCAD.Vector (38.1,-0.01,2451.11),FreeCAD.Rotation (-1.570092458683775e-16, -1.5700924586837752e-16, -0.7071067811865476, 0.7071067811865475) )
 		CeilingPanel(newobj)
+
+		framing.defaultAttachment( newobj )
 		ViewProviderCeilingPanel(newobj.ViewObject)	
 		FreeCAD.ActiveDocument.recompute()
 
@@ -55,10 +61,10 @@ class CeilingPanel():
 	"""
 	The CeilingPanel Class defines the graphical representation of the object and its underlying shape.
 	"""
-
+ 	#Placement = FreeCAD.Placement()
 	def __init__(self, obj):
 
-#		self.Placement = FreeCAD.Placement()
+
 
 		precuts = ['8 ft', '4 ft', '2 ft']
 
@@ -70,7 +76,7 @@ class CeilingPanel():
 		obj.addProperty("App::PropertyEnumeration", "Function", "Member", "Where this member is being used").Function = ['1st Floor', '2nd Floor', '3rd Floor','4th Floor']
 		obj.addProperty("App::PropertyString", "MemberName", "Member","Where this member is being used").MemberName = "CeilingPanel"
 		obj.Proxy = self
-#		obj.addExtension('Part::AttachExtensionPython', obj)
+		obj.addExtension('Part::AttachExtensionPython')
 
 	def onChanged(self, fp, prop):
 		if prop == "Length" or prop == "Width" or prop == "Height":
@@ -80,17 +86,9 @@ class CeilingPanel():
 
 
 	def execute(self, fp):
-		#Using the PNT arguement you can position the origin of the shape.
-		#if the object has already been created, retrieve the current placement b4 re-creating
-		#otherwise the fp ( featurepython ) object gets reset to 0,0,0 or whatever is in below commands
 		fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height, FreeCAD.Vector(0,0,0),FreeCAD.Vector(0,0,1 ) )
+		fp.positionBySupport()
 
-#		print ( "Object Placement:", fp.Placement )
-#		fp.Placement = self.CeilingPanel.placement
-#		print ( "Object Placement:", fp.Placement )
-
-		fp.recompute()
-#		print ("Ceiling Panel execute(d)")
 		
 
 class ViewProviderCeilingPanel:

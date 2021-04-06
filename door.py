@@ -12,18 +12,18 @@ __command_group__ = "Constructions"
 
 class Door_Command:
 	def GetResources(slf):
-#		print 'Run getResources() for Door_Command' 
+		icon_path = framing.getIconImage( "door" ) 	
 
 #		image_path = "/" + framing.mod_name + '/icons/door.png'
-		image_path = '/stickframe/icons/door.png' 
-		global_path = FreeCAD.getHomePath()+'Mod' 
-		user_path = FreeCAD.getUserAppDataDir()+'Mod' 
-		icon_path = '' 
+		# image_path = '/stickframe/icons/door.png' 
+		# global_path = FreeCAD.getHomePath()+'Mod' 
+		# user_path = FreeCAD.getUserAppDataDir()+'Mod' 
+		# icon_path = '' 
 
-		if os.path.exists(user_path + image_path): 
-			icon_path = user_path + image_path 
-		elif os.path.exists(global_path + image_path): 
-			icon_path = global_path + image_path 
+		# if os.path.exists(user_path + image_path): 
+		# 	icon_path = user_path + image_path 
+		# elif os.path.exists(global_path + image_path): 
+		# 	icon_path = global_path + image_path 
 		return {'MenuText': 'Door', 
 			'ToolTip': 'Add a door rough out to the construction.', 
 			'Pixmap' : str(icon_path) }  
@@ -48,7 +48,7 @@ class Door_Command:
 		partobj.addProperty("App::PropertyLength", "Length", "Assembly Dimension","Change the overall length of the Door").Length = "3352.800"
 		partobj.addProperty("App::PropertyLength", "Width", "Assembly Dimension","Change the overall width of the Door").Width = "2743.2"
 
-#		partobj.addExtension('Part::AttachExtensionPython', partobj)
+		partobj.addExtension('Part::AttachExtensionPython')
 
 		b =FreeCAD.ActiveDocument.addObject('Sketcher::SketchObjectPython','DoorSketch') 
 
@@ -58,6 +58,7 @@ class Door_Command:
 		b.ViewObject.Proxy=0
 		FreeCAD.ActiveDocument.recompute()
 		partobj.addObject ( FreeCAD.ActiveDocument.getObject( b.Name ) )
+
 
 
 		names = []
@@ -84,7 +85,7 @@ class Door_Command:
 
 		placements = []
 
-		placements.append ( FreeCAD.Vector (89.37597847280001, -554.0292141780001, 0.0) )
+		placements.append ( FreeCAD.Vector (38.1, 38.1, 0.0) )
 		placements.append ( FreeCAD.Vector (89.3759784728, -592.129214178, -8e-15) )
 		placements.append ( FreeCAD.Vector (89.37597847279994, -1709.729214178, 0.0) )
 		placements.append ( FreeCAD.Vector (89.37597847279994, -1747.829214178, 0.0) )
@@ -96,10 +97,10 @@ class Door_Command:
 
 		rotations = []
 
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -1.0, -1.1102230246251565e-16) )
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -1.0, -1.1102230246251565e-16) )
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -1.0, -1.1102230246251565e-16) )
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -1.0, -1.1102230246251565e-16) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865477, 0.7071067811865474) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865477, 0.7071067811865474) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865477, 0.7071067811865474) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865477, 0.7071067811865474) )
 		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.7071067811865476, -0.7071067811865475) )
 		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.7071067811865476, -0.7071067811865475) )
 
@@ -155,36 +156,6 @@ class Door_Command:
 		expressionslist.append( expressions )
 		expressions = []
 			
-#		FreeCAD.ActiveDocument.KingStud.setExpression('Placement.Base.z', 'DoorSketch.Shape.Edge4.Vertex1.Z')
-#		FreeCAD.ActiveDocument.KingStud.setExpression('Placement.Base.y', 'DoorSketch.Shape.Edge4.Vertex1.Y + 38.09')
-#		FreeCAD.ActiveDocument.KingStud.setExpression('Placement.Base.x', 'DoorSketch.Shape.Edge4.Vertex1.X')
-#		FreeCAD.ActiveDocument.JackStud.setExpression('Placement.Base.z', 'DoorSketch.Shape.Edge4.Vertex1.Z')
-#		FreeCAD.ActiveDocument.JackStud.setExpression('Placement.Base.y', 'DoorSketch.Shape.Edge4.Vertex1.Y')
-#		FreeCAD.ActiveDocument.JackStud.setExpression('Placement.Base.x', 'DoorSketch.Shape.Edge4.Vertex1.X')
-#		FreeCAD.ActiveDocument.JackStud.setExpression('Length', 'DoorSketch.Constraints.RoughOpeningHeight')
-#		FreeCAD.ActiveDocument.JackStud001.setExpression('Placement.Base.z', 'DoorSketch.Shape.Edge2.Vertex2.Z')
-#		FreeCAD.ActiveDocument.JackStud001.setExpression('Placement.Base.y', 'DoorSketch.Shape.Edge2.Vertex2.Y - 38.09')
-#		FreeCAD.ActiveDocument.JackStud001.setExpression('Placement.Base.x', 'DoorSketch.Shape.Edge2.Vertex2.X')
-#		FreeCAD.ActiveDocument.JackStud001.setExpression('Length', 'DoorSketch.Constraints.RoughOpeningHeight')
-#		FreeCAD.ActiveDocument.KingStud001.setExpression('Placement.Base.z', 'DoorSketch.Shape.Edge2.Vertex2.Z')
-#		FreeCAD.ActiveDocument.KingStud001.setExpression('Placement.Base.y', 'DoorSketch.Shape.Edge2.Vertex2.Y - 38.09 - 38.09')
-#		FreeCAD.ActiveDocument.KingStud001.setExpression('Placement.Base.x', 'DoorSketch.Shape.Edge2.Vertex2.X')
-#		FreeCAD.ActiveDocument.Stud004.setExpression('Placement.Base.z', 'DoorSketch.Shape.Edge1.Vertex1.Z + 190')
-#		FreeCAD.ActiveDocument.Stud004.setExpression('Placement.Base.x', 'DoorSketch.Shape.Edge4.Vertex1.X')
-#		FreeCAD.ActiveDocument.DoorHeader.setExpression('Placement.Base.z', 'DoorSketch.Shape.Edge1.Vertex1.Z + 38.09')
-#		FreeCAD.ActiveDocument.DoorHeader.setExpression('Placement.Base.y', 'DoorSketch.Shape.Edge1.Vertex1.Y + 38.09')
-#		FreeCAD.ActiveDocument.DoorHeader.setExpression('Placement.Base.x', 'DoorSketch.Shape.Edge1.Vertex1.X - 38.09')
-#		FreeCAD.ActiveDocument.DoorHeader.setExpression('Length', 'DoorSketch.Constraints.RoughOpeningWidth + 3"')
-#		FreeCAD.ActiveDocument.DoorHeader001.setExpression('Placement.Base.z', 'DoorSketch.Shape.Edge1.Vertex1.Z + 38.09')
-#		FreeCAD.ActiveDocument.DoorHeader001.setExpression('Placement.Base.y', 'DoorSketch.Shape.Edge1.Vertex1.Y + 38.09')
-#		FreeCAD.ActiveDocument.DoorHeader001.setExpression('Placement.Base.x', 'DoorSketch.Shape.Edge1.Vertex1.X - 38.09 - 38.09 - 12.7')
-#		FreeCAD.ActiveDocument.DoorHeader001.setExpression('Length', 'DoorSketch.Constraints.RoughOpeningWidth + 3"')
-#		FreeCAD.ActiveDocument.Panel.setExpression('Length', 'DoorSketch.Constraints.RoughOpeningWidth')
-#		FreeCAD.ActiveDocument.Panel.setExpression('Placement.Base.z', 'DoorSketch.Shape.Edge1.Vertex1.Z')
-#		FreeCAD.ActiveDocument.Panel.setExpression('Placement.Base.y', 'DoorSketch.Shape.Edge1.Vertex1.Y + 38.09')
-#		FreeCAD.ActiveDocument.Panel.setExpression('Placement.Base.x', 'DoorSketch.Shape.Edge1.Vertex1.X - 38.09')
-
-
 		for name, expressions in zip( names, expressionslist):
 		#	print ( name )
 			for label, expression in expressions:

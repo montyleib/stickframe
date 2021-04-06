@@ -10,7 +10,6 @@ __url__ = "http://www.mathcodeprint.com"
 __command_name__ = "Wall"
 __command_group__ = "Constructions"
 
-
 wall_type = ['Interior','Exterior','Load Bearing','Non-Load Bearing','Demising']
 #Not sure if room name makes any sense as most walls will be part of two rooms.
 wall_room = ['Living','Dining','Bedroom','Garage','Bathroom','Kitchen']
@@ -25,17 +24,18 @@ class Wall_Command:
 	"""
 
 	def GetResources(self):
+		icon_path = framing.getIconImage( "wall" ) 	
 
 #		image_path = "/" + framing.mod_name + '/icons/wall.png'
-		image_path = '/stickframe/icons/wall.png'
-		global_path = FreeCAD.getHomePath()+"Mod"
-		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		icon_path = ""
+		# image_path = '/stickframe/icons/wall.png'
+		# global_path = FreeCAD.getHomePath()+"Mod"
+		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
+		# icon_path = ""
 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {"MenuText": "Wall",
 			"ToolTip": "Add a Wall Group to the Construction",
 			'Pixmap' : str(icon_path) }
@@ -47,13 +47,10 @@ class Wall_Command:
 			return True
 
 	def Activated(self):
-		#TODO: Move this to a makeWall() command, and it should probs go in 
-		# 	  the wall class not the toolbar command class, Wall_Command
-
 		partobj = FreeCAD.ActiveDocument.addObject('App::Part','Wall')
 		partobj.addProperty("App::PropertyLength", "Length", "Assembly Dimension","Change the overall Length of the Wall").Length = "8 ft"
 		partobj.addProperty("App::PropertyLength", "Height", "Assembly Dimension","Change the overall Height of the Wall").Height = "8 ft"
-#		partobj.addExtension('Part::AttachExtensionPython', partobj)
+		partobj.addExtension('Part::AttachExtensionPython')
 
 		names = []
 		lengths = []
@@ -63,12 +60,21 @@ class Wall_Command:
 		expressions = []
 
 		if framing.isItemSelected():
-			selection = FreeCADGui.Selection.getSelection()
+			selection = FreeCADGui.Selection.getSelectionEx()
+			obj = selection[0].SubElementNames
+			edge_name = obj[0]
 
 			#One Edge
-			edge = FreeCADGui.Selection.getSelection()[0].Shape
-			if 	isinstance( edge, Part.Wire ):	
-				partobj.Length = edge.Length
+			edge_obj = FreeCADGui.Selection.getSelection()[0]
+			edge_shp = FreeCADGui.Selection.getSelection()[0].Shape
+			
+
+			edge_elt = FreeCADGui.Selection.getSelection ()[0].Shape.Edge1
+
+			if 	isinstance( edge_shp, Part.Wire ):	
+				partobj.Length = edge_elt.Length
+				FreeCAD.ActiveDocument.getObject(partobj.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
+				FreeCAD.ActiveDocument.getObject(partobj.Name).MapMode = 'OXY'
 
 		#retrieve lumber dimensions
 		#TODO: Actually get the values from a settings location
@@ -96,30 +102,31 @@ class Wall_Command:
 				#first_joist, no span added
 				names.append ( stud.makeStud( "Starter" ).Name )
 				lengths.append ( partobj.Height - stud_thickness * 3)
-				placements.append( FreeCAD.Vector ( 38.09, 88.90, -38.09)  )	
-				rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+				placements.append( FreeCAD.Vector ( 0, 88.90, 0)  )
+				rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 1) )
+
 			if i == 1:
 				#second, add first span.
 				names.append ( stud.makeStud( "Stud" ).Name )
 				lengths.append ( partobj.Height - stud_thickness * 3 )
-				placements.append( FreeCAD.Vector ( start_gap, 88.90, -38.09)  )
-				rotations.append (FreeCAD. Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+				placements.append( FreeCAD.Vector ( start_gap, 88.90, 0)  )
+				rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 1) )
 
 			if ( i > 1 and i < ttl_studs ):
 				#middle_bays
 				names.append ( stud.makeStud( "Stud" ).Name )
 #				lengths.append ( partobj.Height - stud_thickness * 3 )
 				lengths.append ( 2324.10 )
-				placements.append( FreeCAD.Vector ( (stud_centers * (i - 1) + start_gap + stud_thickness ) , 88.90, -38.09)  )
-				rotations.append (FreeCAD. Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+				placements.append( FreeCAD.Vector ( (stud_centers * (i - 1) + start_gap + stud_thickness ) , 88.90, 0)  )
+				rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 1) )
 
 			if i == ttl_studs -1:
 				#last_joist
 				names.append ( stud.makeStud( "End" ).Name )
 				lengths.append ( partobj.Height - stud_thickness * 3 )	
 #				placements.append( FreeCAD.Vector ( length - ( stud_width.getValueAs( 'mm') * 2 ),  88.90, -38.09)  )  
-				placements.append( FreeCAD.Vector ( length ,  88.90, -38.09)  )
-				rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+				placements.append( FreeCAD.Vector ( length -38.1 ,  88.90, 0)  )
+				rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 1) )
 
 
 		#Add Nailers
@@ -129,11 +136,11 @@ class Wall_Command:
 				lengths.append ( partobj.Height - stud_thickness * 3 )	
 				lengths.append ( partobj.Height - stud_thickness * 3 )	
 
-				placements.append( FreeCAD.Vector ( 38.1 + 38.1 ,  0, -38.09)  )
-				placements.append( FreeCAD.Vector ( length - 38.1 -38.1 ,  88.90, -38.09)  )
+				placements.append( FreeCAD.Vector ( 38.1 + 38.1 ,  88.90, 0)  )
+				placements.append( FreeCAD.Vector ( length - 114.3 ,  88.90,0 )  )
 
-				rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.7071067811865475, 0.7071067811865476) )
-				rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )	
+				rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 1) )
+				rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 1) )
 
 		#Plates
 		names.append( plate.makePlate ( 'Bottom' ).Name)
@@ -148,13 +155,18 @@ class Wall_Command:
 		lengths.append ( length )
 		lengths.append ( length - ( stud_width.getValueAs( 'mm') * 2 ))
 
-		placements.append( FreeCAD.Vector (0.0, 0.0, 0.0)  )
-		placements.append( FreeCAD.Vector (0.0, 5.33e-13, 2324.1 + 38.1)  ) #TODO: Paramaterize
-		placements.append( FreeCAD.Vector (88.10, 1.7e-14, 2324.1 + 38.1 + 38.1)  ) #TODO: Paramaterize
+		placements.append( FreeCAD.Vector (0.0, 0.0,-38.1)  )
+		placements.append( FreeCAD.Vector (0.0, 5.33e-13, 2324.1)  ) #TODO: Paramaterize
+		placements.append( FreeCAD.Vector (88.10, 1.7e-14, 2324.1 + 38.1 )  ) #TODO: Paramaterize
 
-		rotations.append ( FreeCAD.Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
-		rotations.append ( FreeCAD.Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
-		rotations.append ( FreeCAD.Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
+#		rotations.append ( FreeCAD.Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
+#		rotations.append ( FreeCAD.Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
+#		rotations.append ( FreeCAD.Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
+
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.0, 1) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.0, 1) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.0, 1) )
+
 
 		#Spacers
 		names.append( studspacer.makeStudspacer ( 'Studspacer' ).Name)
@@ -268,6 +280,7 @@ class Wall:
 	def execute(self,fp):
 		
 		#fp.ViewObject.Proxy=0
+		fp.positionBySupport()
 		fp.recompute()
 
 

@@ -23,17 +23,18 @@ class Panel_Command:
 	The Panel_Command class integrates the panel object into the FreeCAD Workbench, StickFrame
 	"""
 	def GetResources(self):
+		icon_path = framing.getIconImage( "panel" ) 	
 
 #		image_path = "/" + framing.mod_name + '/icons/panel.png'
-		image_path = '/stickframe/icons/panel.png'
-		global_path = FreeCAD.getHomePath()+"Mod"
-		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		icon_path = ""
+		# image_path = '/stickframe/icons/panel.png'
+		# global_path = FreeCAD.getHomePath()+"Mod"
+		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
+		# icon_path = ""
 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {"MenuText": "Panel",
 			"ToolTip": "Add a  Panel to the Construction",
 			'Pixmap': str(icon_path)}
@@ -47,6 +48,9 @@ class Panel_Command:
 	def Activated(self):
 		newobj = FreeCAD.ActiveDocument.addObject("Part::FeaturePython", "Panel")
 		Panel(newobj)
+
+		framing.defaultAttachment( newobj )
+
 		ViewProviderPanel(newobj.ViewObject)	
 
 		newobj.Placement = FreeCAD.Placement( FreeCAD.Vector (2e-12, 88.9, -53.975),FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
@@ -75,7 +79,7 @@ class Panel():
 		obj.addProperty("App::PropertyString", "MemberName", "Member","Where this member is being used").MemberName = "Panel"
 		obj.Proxy = self
 
-#		obj.addExtension('Part::AttachExtensionPython', obj)
+		obj.addExtension('Part::AttachExtensionPython')
 
 	def onChanged(self, fp, prop):
 		if prop == "Length" or prop == "Width" or prop == "Height":

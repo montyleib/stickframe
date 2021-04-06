@@ -1,6 +1,6 @@
 
 
-class StickFrameWorkbench (Workbench):
+class NewStickFrameWorkbench (Workbench):
     "Stick Framing workbench object"
     Icon = """
 /* XPM */
@@ -1271,7 +1271,7 @@ static char * logo_xpm[] = {
 
 #        FreeCADGui.addCommand('Framing_PanelTools', PathCommandGroup(panelscmdlist, QtCore.QT_TRANSLATE_NOOP("Framing", 'Panel Types')))
 
-        import stud #, plate, studspacer, floorjoist, ceilingjoist, rafter, collarbeam, ridgebeam, stringer, story
+        import stud , plate, studspacer, floorjoist, ceilingjoist, rafter, collarbeam, ridgebeam, stringer, story
         import panel ,roofpanel, floorpanel, ceilingpanel
         import wall, simplewall, window, roof, door, ceiling
         import floor, wall, simplewall, window, roof, door, ceiling
@@ -1283,7 +1283,10 @@ static char * logo_xpm[] = {
 
         import framingreload
 
-        self.appendToolbar("Members", ["Stud", "Plate", "Studspacer", "Floor Joist", "Ceiling Joist", "Collar Beam", "Rafter", "Stringer", "Ridgebeam","Story"])
+        self.appendMenu("Stick Framing", ["Stud", "Plate", "Studspacer", "Floor Joist", "Ceiling Joist", "CollarBeam", "Rafter", "Stringer", "Ridgebeam", "Story"])
+        self.appendMenu("Stick Framing", ["FloorPanel", "Floor", "Wall", "Window", "Door", "Ceiling", "RoofPanel", "Roof", "Stringer", "StairCase"])
+
+        self.appendToolbar("Members", ["Stud", "Plate", "Studspacer", "Floor Joist", "Ceiling Joist", "CollarBeam", "Rafter", "Stringer", "Ridgebeam","Story"])
         self.appendToolbar("DoorandWindow", ["Header"])
         self.appendToolbar("Panels", ["Panel", "FloorPanel", "CeilingPanel", "RoofPanel"])
         self.appendToolbar("Constructions", ["Floor", "Window", "Door", "Wall", "SimpleWall", "Ceiling", "Roof", "StairCase"])
@@ -1292,14 +1295,11 @@ static char * logo_xpm[] = {
 
         self.appendToolbar("FramingReload", ["FramingReload"])
 
-
-#        self.appendMenu("StickFrame", ["FloorPanel", "Floor", "Wall", "Window", "Door", "Ceiling", "RoofPanel", "Roof", "Stringer", "StairCase"])
-
+        print( "Stickframe check ????")
         Log ("The StickFrame Module Initialize method has been run \n")
 
-        from PySide import QtGui ,QtCore
-
-        QtGui.QMessageBox.information(None, "WARNING!!!", "This Workbench is extremely unstable. It was created for the educational oppurtunities. \n\n It is more like an extreme Macro than a well coded workbench. \n\n I thought others MIGHT be able to use it. Likely it will only frustrrate you. You have been warned")
+#        from PySide import QtGui ,QtCore
+#        QtGui.QMessageBox.information(None, "WARNING!!!", "This Workbench is extremely unstable. It was created for the educational oppurtunities. \n\n It is more like an extreme Macro than a well coded workbench. \n\n I thought others #MIGHT be able to use it. Likely it will only frustrrate you. You have been warned")
 
 		
 
@@ -1314,4 +1314,4 @@ static char * logo_xpm[] = {
         pass
 
 
-FreeCADGui.addWorkbench(StickFrameWorkbench)
+FreeCADGui.addWorkbench(NewStickFrameWorkbench)

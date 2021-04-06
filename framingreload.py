@@ -35,14 +35,14 @@ class FramingReload_Command:
         import fnmatch
         cmds_path = FreeCAD.getUserAppDataDir()+"Mod/framing/commands"
 
-        print (cmds_path)
-        listOfFiles = os.listdir(cmds_path)
-        pattern = "*.py"
-        for entry in listOfFiles:
-            if fnmatch.fnmatch(entry, pattern):
-                print (entry)
-                mod_name = entry.split(".")[0]
-                print ("Module Name: ", mod_name)
+#        print (cmds_path)
+#        listOfFiles = os.listdir(cmds_path)
+#        pattern = "*.py"
+#        for entry in listOfFiles:
+#            if fnmatch.fnmatch(entry, pattern):
+#                print (entry)
+#                mod_name = entry.split(".")[0]
+#                print ("Module Name: ", mod_name)
 #				com_name = str(mod_name).capitalize()
 #				print ( "Command Name: ",com_name )
 
@@ -50,15 +50,15 @@ class FramingReload_Command:
 #		to sub-directories so that the files may be imported otherwise
 #		python blocks them, for security.
 
-                try:
-                    # TODO : Load from commands. directory
-                    #module = __import__ ("commands." + mod_name)
-                    module = __import__(mod_name)
-                    print (module)
-                    reload(module)
-                except ImportError as ie:
-                    raise ImportError(
-                        "Error: {} when importing {}".format(ie, mod_name))
+#                try:
+#                    # TODO : Load from commands. directory
+#                    #module = __import__ ("commands." + mod_name)
+#                    module = __import__(mod_name)
+#                    print (module)
+#                    reload(module)
+#                except ImportError as ie:
+#                    raise ImportError(
+#                        "Error: {} when importing {}".format(ie, mod_name))
 
         # FreeCADGui.removeWorkbench("StickFrameWorkbench")
 
@@ -71,7 +71,11 @@ class FramingReload_Command:
             import stud
             import plate
             import floorjoist
+
             import floor
+#            from floor import Floor_Command
+
+
             import wall
             import staircase
             import door
@@ -86,17 +90,22 @@ class FramingReload_Command:
             import floorpanel
             import ceilingpanel
             import roofpanel
-            import stringer
-            from stringer import Stringer
+#            import stringer
+#            from stringer import Stringer
 
         except:
             print ("Import Error")
 
         try:
+			#reload is only for modules ( not classes )
+
             reload(stud)
             reload(plate)
             reload(floorjoist)
+
             reload(floor)
+#           reload(Floor_Command)
+
             reload(wall)
             reload(staircase)
             reload(door)
@@ -111,11 +120,12 @@ class FramingReload_Command:
             reload(floorpanel)
             reload(ceilingpanel)
             reload(roofpanel)
-            reload(stringer)
-            reload(Stringer)
+#            reload(stringer)
+#            reload(Stringer)
 
-        except:
-            print ("Reload Error")
+        except Exception as e:
+            print ("Reload Error:")
+            print ( e )
 
         print ("Framing Commands Reloaded")
 

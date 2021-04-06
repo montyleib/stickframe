@@ -48,17 +48,18 @@ def makeRafter(name):
 
 class Rafter_Command:
 	def GetResources(self):
+		icon_path = framing.getIconImage( "rafter" ) 	
 
 #		image_path = "/" + framing.mod_name + '/icons/rafter.png'
-		image_path = '/stickframe/icons/rafter.png'
-		global_path = FreeCAD.getHomePath()+'Mod'
-		user_path = FreeCAD.getUserAppDataDir()+'Mod'
-		icon_path = ''
+		# image_path = '/stickframe/icons/rafter.png'
+		# global_path = FreeCAD.getHomePath()+'Mod'
+		# user_path = FreeCAD.getUserAppDataDir()+'Mod'
+		# icon_path = ''
 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {'MenuText': 'Rafter',
 			'ToolTip': 'Add a roof rafter to the construction.',
 			'Pixmap': str(icon_path)}

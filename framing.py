@@ -2,7 +2,9 @@ import math
 import FreeCAD
 import FreeCADGui
 import Draft
+import Part
 import plate
+import os
 
 # def makeStud(name):
 #	newstud = FreeCAD.ActiveDocument.addObject("Part::FeaturePython", name )
@@ -78,6 +80,41 @@ def isItemSelected():
     if selection:
         return True
     return False
+
+def getIconImage( toolname ):
+
+#	image_path = "/" + framing.mod_name + '/icons/stud.png'
+	image_path = '/stickframe/icons/' + toolname + ".png"
+
+	global_path = FreeCAD.getHomePath()+"Mod"
+	user_path = FreeCAD.getUserAppDataDir()+"Mod"
+	icon_path = ""
+
+	if os.path.exists(user_path + image_path):
+		icon_path = user_path + image_path
+
+	elif os.path.exists(global_path + image_path):
+		icon_path = global_path + image_path
+
+	return icon_path	
+
+def defaultAttachment( framing_member ):
+	if isItemSelected():
+		selection = FreeCADGui.Selection.getSelectionEx()
+		obj = selection[0].SubElementNames
+		edge_name = obj[0]
+
+		edge_obj = FreeCADGui.Selection.getSelection()[0]
+		edge_shp = FreeCADGui.Selection.getSelection()[0].Shape
+		edge_elt = FreeCADGui.Selection.getSelection ()[0].Shape.Edge1
+		
+		if isinstance( edge_shp, Part.Wire ):
+			FreeCAD.ActiveDocument.getObject(framing_member.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
+			FreeCAD.ActiveDocument.getObject(framing_member.Name).MapMode = 'OXY'	
+			print("item selected part.wire:", obj[0] )
+		if 	isinstance( edge_shp, Part.Compound ):
+			print("item selected part.compound:", obj )
+	return
 
 
 def getSelectedObject():

@@ -24,17 +24,18 @@ class SimpleWall_Command:
 	"""
 
 	def GetResources(self):
+		icon_path = framing.getIconImage( "simple_wall" ) 	
 
 #		image_path = "/" + framing.mod_name + '/icons/simple_wall.png'
-		image_path = '/stickframe/icons/simple_wall.png'
-		global_path = FreeCAD.getHomePath()+"Mod"
-		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		icon_path = ""
+		# image_path = '/stickframe/icons/simple_wall.png'
+		# global_path = FreeCAD.getHomePath()+"Mod"
+		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
+		# icon_path = ""
 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {"MenuText": "Wall",
 			"ToolTip": "Add a Wall Group to the Construction",
 			'Pixmap' : str(icon_path) }
@@ -49,6 +50,7 @@ class SimpleWall_Command:
 		partobj = FreeCAD.ActiveDocument.addObject('App::Part','Wall')
 		partobj.addProperty("App::PropertyLength", "Length", "Dimension","Change the overall Length of the Wall").Length = "8 ft"
 		partobj.addProperty("App::PropertyLength", "Height", "Dimension","Change the overall Height of the Wall").Height = "8 ft"
+		partobj.addExtension('Part::AttachExtensionPython')
 
 		names = []
 		lengths = []
@@ -57,23 +59,33 @@ class SimpleWall_Command:
 		expressionslist = []
 		expressions = []
 
+		if framing.isItemSelected():
+			selection = FreeCADGui.Selection.getSelectionEx()
+			obj = selection[0].SubElementNames
+			edge_name = obj[0]
+
+			#One Edge
+			edge_obj = FreeCADGui.Selection.getSelection()[0]
+			edge_shp = FreeCADGui.Selection.getSelection()[0].Shape
+			
+
+			edge_elt = FreeCADGui.Selection.getSelection ()[0].Shape.Edge1
+
+			if 	isinstance( edge_shp, Part.Wire ):	
+				partobj.Length = edge_elt.Length
+				FreeCAD.ActiveDocument.getObject(partobj.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
+				FreeCAD.ActiveDocument.getObject(partobj.Name).MapMode = 'OXY'
+
 		#calculate # of studs and positions
 		# these calculations are the same for all walls, floors, ceiling roofs
 		# place this is framing
 
-		if framing.isItemSelected():
-			selection = FreeCADGui.Selection.getSelection()
-
-			#One Edge
-			edge = FreeCADGui.Selection.getSelection()[0].Shape
-			if 	isinstance( edge, Part.Wire ):	
-				partobj.Length = edge.Length
-
-
 		stud_centers = FreeCAD.Units.parseQuantity('406.4 mm')
 		stud_width = FreeCAD.Units.parseQuantity('3.5 in')
 		stud_thickness = FreeCAD.Units.parseQuantity('1.5 in')
-		length = partobj.Length.getValueAs( 'mm' ) - (stud_thickness.getValueAs( 'mm') * 2 ) 
+
+		length = partobj.Length.getValueAs( 'mm' ) 
+		#length = partobj.Length.getValueAs( 'mm' ) - (stud_thickness.getValueAs( 'mm') * 2 ) 
 
 		gaps = math.ceil ( length.Value / stud_centers )
 		ttl_studs = gaps + 1
@@ -99,43 +111,54 @@ class SimpleWall_Command:
 		lengths.append ( length - ( stud_width.getValueAs( 'mm') * 2 ) )
 		lengths.append ( length )
 
-		placements.append( FreeCAD.Vector (0.0, 0.0, 0.0)  )  # plate
-		placements.append( FreeCAD.Vector (0.0, 5.33e-13, 2324.1 + 38.1)  )  # plate
-		placements.append( FreeCAD.Vector (-88.9, 88.90000000000022, 2324.1 + 38.1  )  )  # plate
+		#lengths.append ( length)
+		#lengths.append ( length)
+		#lengths.append ( length + ( stud_width.getValueAs( 'mm') * 2 ) )
 
-		rotations.append (FreeCAD. Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )  # plate
-		rotations.append (FreeCAD. Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )  # plate
-		rotations.append (FreeCAD. Rotation (-0.7071067811865475, 1.1102230246251565e-16, 1.1102230246251565e-16, -0.7071067811865476) )  # plate
+
+		placements.append( FreeCAD.Vector (88.90, 0.0, - 38.10)  )  # plate
+		placements.append( FreeCAD.Vector (88.90, 5.33e-13, 2324.1 )  )  # plate
+		placements.append( FreeCAD.Vector (0.0, 0.0, 2324.1 + 38.1  )  )  # plate
+
+#		rotations.append (FreeCAD. Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )  # plate
+#		rotations.append (FreeCAD. Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )  # plate
+#		rotations.append (FreeCAD. Rotation (-0.7071067811865475, 1.1102230246251565e-16, 1.1102230246251565e-16, -0.7071067811865476) )  # plate
+
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.0, 1) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.0, 1) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.0, 1) )
 
 		#the only thing changin is the X of the placement
 		for i in range(0, ttl_studs):
 			if i == 0 :
-				#first_joist, no span added
+				#first_stud, no span added
 				names.append ( stud.makeStud( "Starter" ).Name )
 				lengths.append ( partobj.Height - stud_thickness * 3)
-				placements.append( FreeCAD.Vector ( 38.09, 88.90, -38.09)  )	
-				rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+				placements.append( FreeCAD.Vector ( stud_width, 88.90, 0)  )		
+				rotations.append (FreeCAD. Rotation (0.0, 0.0, 0, 0.0) )
+
 			if i == 1:
 				#second, add first span.
 				names.append ( stud.makeStud( "Stud" ).Name )
 				lengths.append ( partobj.Height - stud_thickness * 3 )
-				placements.append( FreeCAD.Vector ( start_gap, 88.90, -38.09)  )
-				rotations.append (FreeCAD. Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+				placements.append( FreeCAD.Vector ( stud_width + start_gap, 88.90, 0)  )
+				rotations.append (FreeCAD. Rotation (0.0, 0.0, 0, 0.0) )
+#				rotations.append (FreeCAD. Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
 
 			if ( i > 1 and i < ttl_studs -1):
 				#middle_bays
 				names.append ( stud.makeStud( "Stud" ).Name )
 #				lengths.append ( partobj.Height - stud_thickness * 3 )
 				lengths.append ( 2324.10 )
-				placements.append( FreeCAD.Vector ( (stud_centers * (i - 1) + start_gap + stud_thickness ) , 88.90, -38.09)  )
-				rotations.append (FreeCAD. Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+				placements.append( FreeCAD.Vector ( stud_width + (stud_centers * (i - 1) + start_gap + stud_thickness ) , 88.90, 0)  )
+				rotations.append (FreeCAD. Rotation (0.0, 0.0, 0, 0.0) )
 
 			if i == ttl_studs -1:
-				#last_joist
+				#last stud
 				names.append ( stud.makeStud( "End" ).Name )
 				lengths.append ( partobj.Height - stud_thickness * 3 )	
-				placements.append( FreeCAD.Vector ( length - ( stud_width.getValueAs( 'mm') * 2 ),  88.90, -38.09)  )
-				rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+				placements.append( FreeCAD.Vector ( length - 38.09 - 88.90 ,  88.90, 0)  )
+				rotations.append (FreeCAD. Rotation (0.0, 0.0, 0, 0.0) )
 
 #		names.append( stud.makeStud ( 'Starter' ).Name)
 #		names.append( stud.makeStud ( 'End' ).Name)
@@ -195,7 +218,6 @@ class SimpleWall_Command:
 
 		FreeCAD.ActiveDocument.recompute()
 		FreeCADGui.SendMsgToActiveView("ViewFit")	
-
 		#once we know the length of the wall calculate the number of studs needed.
 
 class SimpleWall:
@@ -219,9 +241,9 @@ class SimpleWall:
 
 
 	def execute(self,fp):
-		#fp.ViewObject.Proxy=0
+		fp.positionBySupport()
 		fp.recompute()
-		print ( "Wall executed()" )
+
 
 
 class ViewProviderSimpleWall:

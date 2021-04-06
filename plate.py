@@ -14,16 +14,6 @@ def makePlate(name):
 	Plate(newplate)
 	ViewProviderPlate(newplate.ViewObject)	
 
-#Top Plate Placement
-#	newplate = FreeCAD.Placement( FreeCAD.Vector (0.0, 5.33e-13, 2390.78),FreeCAD.Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
-#Top2 Plate Right Offset Placement
-#On the starter wall this will be offset in one direction, on the joining wall it will be offset in the other direction.
-#	newplate = FreeCAD.Placement( FreeCAD.Vector (88.89999999999999, 1.6919798894838616e-14, 2428.88),FreeCAD.Rotation (0.7071067811865476, 0.0, 0.0, -0.7071067811865475) )
-#Top2 Plate Left Offset Placement
-
-#Bottom Plate Placement
-#	newplate = FreeCAD.Placement( FreeCAD.Vector (0.0, 0.0, 0.0),FreeCAD.Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
-
 	FreeCAD.ActiveDocument.recompute()
 	return newplate
 
@@ -32,8 +22,9 @@ class Plate_Command:
 	The Plate_Command class integrates the plate object into the FreeCAD Workbench, StickFrame
 	"""
 	def GetResources(self):
+		#icon_path = framing.getIconImage( "stud" ) 	
 
-#		image_path = "/" + framing.mod_name + '/icons/plate.png'
+		#image_path = "/" + framing.mod_name + '/icons/plate.png'
 		image_path = '/stickframe/icons/plate.png'
 		global_path = FreeCAD.getHomePath()+"Mod"
 		user_path = FreeCAD.getUserAppDataDir()+"Mod"
@@ -59,15 +50,35 @@ class Plate_Command:
 		ViewProviderPlate(newplate.ViewObject)
 
 		if framing.isItemSelected():
-			selection = FreeCADGui.Selection.getSelection()
+			selection = FreeCADGui.Selection.getSelectionEx()
+			obj = selection[0].SubElementNames
+			edge_name = obj[0]
+
 			#One Edge
-			edge = FreeCADGui.Selection.getSelection()[0].Shape
-			if 	isinstance( edge, Part.Wire ):	
-				FreeCAD.ActiveDocument.getObject(newplate.Name).Length = edge.Length
+			edge_obj = FreeCADGui.Selection.getSelection()[0]
+			edge_shp = FreeCADGui.Selection.getSelection()[0].Shape
+			
+
+			edge_elt = FreeCADGui.Selection.getSelection ()[0].Shape.Edge1
+
+			if 	isinstance( edge_shp, Part.Wire ):	
+					FreeCAD.ActiveDocument.getObject(newplate.Name).Length = edge_elt.Length
+					FreeCAD.ActiveDocument.getObject(newplate.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
+					FreeCAD.ActiveDocument.getObject(newplate.Name).MapMode = 'OXY'
+
+			if 	isinstance( edge_shp, Part.Compound ):
+					FreeCAD.ActiveDocument.getObject(newplate.Name).Length = edge_elt.Length	
+					
+					vertex = ""
+					edge = ""
+			
+					FreeCAD.ActiveDocument.getObject(newplate.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
+					FreeCAD.ActiveDocument.getObject(newplate.Name).MapMode = 'OXY'
+					
 
 
-
-		newplate.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, 88.9, 0.0),FreeCAD.Rotation (0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
+#		newplate.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, 88.9, 0.0),FreeCAD.Rotation (0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
+		newplate.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, 0, 0.0),FreeCAD.Rotation (0.0, 0.0, 0.0, 0.0) )
 		
 		FreeCAD.ActiveDocument.recompute()
 		FreeCADGui.SendMsgToActiveView("ViewFit")	
@@ -82,7 +93,6 @@ class Plate:
 
 	def __init__(self, obj):
 
-#		self.Placement = FreeCAD.Placement()
 
 		#platelengths = ['8 ft','10 ft']
 		#platelocations = ['Bottom','Top']
@@ -99,7 +109,7 @@ class Plate:
 		obj.addProperty("App::PropertyString","MemberName","Member","What is this piece generally called").MemberName = "Plate"
 		obj.Proxy = self
 
-#		obj.addExtension('Part::AttachExtensionPython', obj)
+		obj.addExtension('Part::AttachExtensionPython')
 
 	def onChanged(self, fp, prop):
 		if prop == "Length" or prop == "Width" or prop == "Height":
@@ -108,8 +118,8 @@ class Plate:
 			FreeCAD.ActiveDocument.recompute()
 		if prop == "Function":
 			if fp.Function == "Sill":
-				#Need to add these to existing placement otherwise it gets moved back to starting position
-				fp.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, 88.9, 0.0),FreeCAD.Rotation (0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
+				#fp.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, 88.9, 0.0),FreeCAD.Rotation (0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
+				fp.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, 88.9, 0.0),FreeCAD.Rotation (0.0, 0.0, 0.0, 0.0) )
 			if fp.Function == "Top":
 				fp.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, 5.33e-13, 2390.78 + 38.1),FreeCAD.Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
 			if fp.Function == "Top2":
@@ -118,7 +128,8 @@ class Plate:
 
 
 	def execute(self,fp):
-		fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height, FreeCAD.Vector(0,0,0), FreeCAD.Vector(0,0,1) )
+		fp.Shape = Part.makeBox(fp.Length,fp.Height,fp.Width, FreeCAD.Vector(0,0,0), FreeCAD.Vector(0,0,1) )
+		fp.positionBySupport()
 		fp.recompute()
 
 class ViewProviderPlate:

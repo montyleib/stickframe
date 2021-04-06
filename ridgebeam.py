@@ -26,17 +26,19 @@ class Ridgebeam_Command:
 	The Ridgebeam_Command class integrates the ridgebeam object inot the FreeCAD Workbench, StickFrame
 	"""
 	def GetResources(self):
+		icon_path = framing.getIconImage( "ridgebeam" ) 	
+
 
 #		image_path = "/" + framing.mod_name + '/icons/ridgebeam.png'
-		image_path = '/stickframe/icons/ridgebeam.png'
-		global_path = FreeCAD.getHomePath()+"Mod"
-		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		icon_path = ""
+		# image_path = '/stickframe/icons/ridgebeam.png'
+		# global_path = FreeCAD.getHomePath()+"Mod"
+		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
+		# icon_path = ""
 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {"MenuText": "Ridgebeam",
 				"ToolTip": "Add a Ridgebeam to the Construction",
 				'Pixmap': str(icon_path)}
@@ -50,11 +52,13 @@ class Ridgebeam_Command:
 	def Activated(self):
 		newridgebeam = FreeCAD.ActiveDocument.addObject("Part::FeaturePython", "Ridgebeam")
 		Ridgebeam(newridgebeam)
-		ViewProviderRidgebeam(newridgebeam.ViewObject)	
+		framing.defaultAttachment( newridgebeam )
 
-		newridgebeam.Placement = FreeCAD.Placement( FreeCAD.Vector (-2.76826374121, -1152.1267377466597, 3504.7299430953 + 76.2),FreeCAD.Rotation (0.5, 0.5, 0.5, 0.5) )
-		#newridgebeam.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, -1149.3500000001998, 3343.2799999963),FreeCAD.Rotation (0.5, 0.5, 0.5, 0.5) )
-		
+		ViewProviderRidgebeam(newridgebeam.ViewObject)	
+		#newridgebeam.Placement = FreeCAD.Placement( FreeCAD.Vector (-2.76826374121, -1152.1267377466597, 3504.7299430953 + 76.2),FreeCAD.Rotation (0.5, 0.5, 0.5, 0.5) )
+		newridgebeam.Placement = FreeCAD.Placement( FreeCAD.Vector (-2.76826374121, -1152.1267377466597, 3504.7299430953 + 76.2),FreeCAD.Rotation (0.0, 0.0, 0.0, 0.0) )
+				
+
 		FreeCAD.ActiveDocument.recompute()
 
 
@@ -83,28 +87,17 @@ class Ridgebeam():
 		obj.addProperty("App::PropertyString", "MemberName", "Member","Where this member is being used").MemberName = "Ridgebeam"
 		obj.Proxy = self
 
-#		obj.addExtension('Part::AttachExtensionPython', obj)
+		obj.addExtension('Part::AttachExtensionPython')
 
 	def onChanged(self, fp, prop):
 		if prop == "Length" or prop == "Width" or prop == "Height":
 			self.Placement.Base = self.Placement.Base.mulitply ( fp.Placement )			
 			fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height)
 
-#		print ("Class Variable :onChanged placement: ", self.ridgebeam_placement )
-
 
 	def execute(self, fp):
-		#Using the PNT arguement you can position the origin of the shape.
-		#if the object has already been created, retrieve the current placement b4 re-creating
-		#otherwise the fp ( featurepython ) object gets reset to 0,0,0 or whatever is in below commands
-		fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height, FreeCAD.Vector(0,0,0),FreeCAD.Vector(0,1,0 ) )
-
-#		print ( "Object Placement:", fp.Placement )
-#		fp.Placement = self.ridgebeam_placement
-#		print ( "Object Placement:", fp.Placement )
-
-		fp.recompute()
-#		print ("Ridgebeam execute(d)")
+		fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height ,FreeCAD.Vector(0,0,0),FreeCAD.Vector(0,0,1 ) )
+		fp.positionBySupport()
 		
 
 class ViewProviderRidgebeam:

@@ -30,17 +30,18 @@ class FloorPanel_Command:
 	It creates the Part::FeaturePython container, which holds the Part Object and the associated View 		Object
 	"""
 	def GetResources(self):
+		icon_path = framing.getIconImage( "floorpanel" ) 	
 
 #		image_path = "/" + framing.mod_name + '/icons/floorpanel.png'
-		image_path = '/stickframe/icons/floorpanel.png'
-		global_path = FreeCAD.getHomePath()+"Mod"
-		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		icon_path = ""
+		# image_path = '/stickframe/icons/floorpanel.png'
+		# global_path = FreeCAD.getHomePath()+"Mod"
+		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
+		# icon_path = ""
 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {"MenuText": "FloorPanel",
 			"ToolTip": "Add a Floor Panel to the Construction",
 			'Pixmap': str(icon_path)}
@@ -58,6 +59,8 @@ class FloorPanel_Command:
 
 #2nd Floor Placement
 #		newobj.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, 88.90000000000055, 2581.28),FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
+
+		framing.defaultAttachment( newobj )
 
 		ViewProviderFloorPanel(newobj.ViewObject)	
 		FreeCAD.ActiveDocument.recompute()
@@ -86,20 +89,16 @@ class FloorPanel():
 		obj.addProperty("App::PropertyString", "MemberName", "Member","Where this member is being used").MemberName = "FloorPanel"
 		obj.Proxy = self
 
-#		obj.addExtension('Part::AttachExtensionPython', obj)
+		obj.addExtension('Part::AttachExtensionPython' )
 
 	def onChanged(self, fp, prop):
 		if prop == "Length" or prop == "Width" or prop == "Height":
-			#self.Placement = self.Placement.multiply ( fp.Placement )			
-			#fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height)
 			FreeCAD.ActiveDocument.recompute()
 
 	def execute(self, fp):
-		#Using the PNT arguement you can position the origin of the shape.
-		#if the object has already been created, retrieve the current placement b4 re-creating
-		#otherwise the fp ( featurepython ) object gets reset to 0,0,0 or whatever is in below commands
 		fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height, FreeCAD.Vector(0,0,0),FreeCAD.Vector(0,0,1 ) )
-		fp.recompute()
+		fp.positionBySupport()
+
 		
 
 class ViewProviderFloorPanel:

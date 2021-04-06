@@ -21,17 +21,19 @@ class Floor_Command:
 	"""
 
 	def GetResources(self):
+		icon_path = framing.getIconImage( "floor" ) 	
+
 
 #		image_path = "/" + framing.mod_name + '/icons/floor.png'
-		image_path = '/stickframe/icons/floor.png'
-		global_path = FreeCAD.getHomePath()+"Mod"
-		user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		icon_path = ""
+		# image_path = '/stickframe/icons/floor.png'
+		# global_path = FreeCAD.getHomePath()+"Mod"
+		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
+		# icon_path = ""
 
-		if os.path.exists(user_path + image_path):
-			icon_path = user_path + image_path
-		elif os.path.exists(global_path + image_path):
-			icon_path = global_path + image_path
+		# if os.path.exists(user_path + image_path):
+		# 	icon_path = user_path + image_path
+		# elif os.path.exists(global_path + image_path):
+		# 	icon_path = global_path + image_path
 		return {"MenuText": "Floor",
 			"ToolTip": "Add a Floor Group to the Construction",
 			'Pixmap' : str(icon_path) }
@@ -44,12 +46,13 @@ class Floor_Command:
 
 	def Activated(self):
 		#TODO: Move this to a makeFloor() command
+		print ("Reloaded")
 
 		partobj = FreeCAD.ActiveDocument.addObject('App::Part','Floor')
 
 		partobj.addProperty("App::PropertyLength", "Length", "Assembly Dimension","Change the overall length of the Floor").Length = "8 ft"
 		partobj.addProperty("App::PropertyLength", "Width", "Assembly Dimension","Change the overall width of the Floor").Width = "8 ft"
-#		partobj.addExtension('Part::AttachExtensionPython', partobj)
+		partobj.addExtension('Part::AttachExtensionPython')
 
 		names = []
 		lengths = []
@@ -58,21 +61,93 @@ class Floor_Command:
 		expressionslist = []
 		expressions = []
 
-
 		if framing.isItemSelected():
-			selection = FreeCADGui.Selection.getSelection()
+			selection = FreeCADGui.Selection.getSelectionEx()
+			obj = selection[0].SubElementNames
+			edge_name = obj[0]
+
+			#How many edges? ( Discrete )
+			edges = len( selection )
+			print ( "Discrete edges: ", edges )
+
+			#How many edges? ( Contiguos )					
+			edges = len( selection[0].SubElementNames )
+			print ( "Contiguos edges: ", edges )
+
+	#DISCRETE dRAFT EDGES 
+
+		#>>> selection = FreeCADGui.Selection.getSelectionEx()
+		#>>> selection[0].Object
+		#<Part::Part2DObject>
+		#>>> selection[1].Object
+		#<Part::Part2DObject>
+		#>>> selection[2].Object
+		#<Part::Part2DObject>
+
+		#multiple edges are selected as discrete selections
+		# 3 draft edges
+		#selection = FreeCADGui.Selection.getSelectionEx()
+		#>>> selection[0].SubElementNames
+		#('Edge1',)
+		#>>> selection[1].SubElementNames
+		#('Edge1',)
+		#>>> selection[2].SubElementNames
+		#('Edge1',)
+		#>>> selection[3].SubElementName
+	
+	#CONTIGUOUS DRAFT EDGES
+
+		#>>> selection = FreeCADGui.Selection.getSelectionEx()
+		#>>> selection[0].Object
+		#<Part::Part2DObject>
+		#>>> selection[0].SubElementNames
+		#('Edge1', 'Edge2', 'Edge3')
+
+			for name in obj:
+				print ( name )
 
 			#One Edge
-			edge = FreeCADGui.Selection.getSelection()[0].Shape
-			if 	isinstance( edge, Part.Wire ):	
-				partobj.Length = edge.Length
+			edge_obj = FreeCADGui.Selection.getSelection()[0]
+			edge_shp = FreeCADGui.Selection.getSelection()[0].Shape
+			
+			edge_elt = FreeCADGui.Selection.getSelection ()[0].Shape.Edge1
+
+			if isinstance( edge_shp, Part.Wire ):	
+				partobj.Length = edge_elt.Length
+				FreeCAD.ActiveDocument.getObject(partobj.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
+				FreeCAD.ActiveDocument.getObject(partobj.Name).MapMode = 'OXY'
+
+
+	# DISCRETE SKETCH EDGES
+
+		#>>> selection = FreeCADGui.Selection.getSelectionEx()
+		#>>> selection[0].Object
+		#<Sketcher::SketchObject>
+		#>>> selection[0].SubElementNames
+		#('Edge5', 'Edge6', 'Edge7')
+
+	#contiguos sketch edges
+
+
+		#>>> selection[0].Object
+		#<Sketcher::SketchObject>
+		#sketch edges are uins subelements
+		#>>> selection = FreeCADGui.Selection.getSelectionEx()
+		#>>> selection[0].SubElementNames
+		#('Edge1', 'Edge2', 'Edge3')
+
+
+
+
+			#draft line,polyline,rectangle - <Part::Part2DObject>
+			#isinstance(obj, Part.Part2DObject )		
 
 
 		#calculate # of boards and positions
 		length = partobj.Length.getValueAs( 'mm' ) - 38.1
 		board_centers = FreeCAD.Units.parseQuantity('406.4 mm')
 		board_width = FreeCAD.Units.parseQuantity('38.1 mm')
-
+		board_thickness = FreeCAD.Units.parseQuantity('1.5 in')
 		gaps = math.ceil ( length.Value / board_centers )
 		ttl_boards = gaps + 1
 		span_gaps = gaps - 2
@@ -85,33 +160,18 @@ class Floor_Command:
 #		end_gap = length -  ( span_gaps * span_gap ) - start_gap - ( ttl_boards * board_width )
 		end_gap = length - ( span_gap.getValueAs( 'mm' ) * span_gaps ) - start_gap.getValueAs( 'mm' ) - ( board_width.getValueAs( 'mm') * ttl_boards)
 
-#		print ( "Length: \t", length )
-#		print ( "Centers: \t", board_centers )
-#		print ( "Board Width: \t", board_width )
-#		print ( "" )
-#		print ( "Gaps Lenght: \t", gaps_length )
-#		print ( "Total Boards: \t", ttl_boards )
-#		print ( "Center Spans: \t", span_gaps )
-
-#		print ( "Span Gap: \t", span_gap )
-#		print ( "Start Gap: \t", start_gap )
-#		print ( "End Gap: \t", end_gap)
-#		print ( "" )
-#		print ( "Length Check: \t", (span_gap * span_gaps ) + start_gap + end_gap + (ttl_boards * board_width ) )
 
 		#TODO: Load from XML or similar
 
 		#Longer Rim Joists
 		names.append ( floorjoist.makeFloorJoist( "RimJoist" ).Name )
 		names.append ( floorjoist.makeFloorJoist( "RimJoist" ).Name )
-#		lengths.append ( '2438.4 mm' )
-#		lengths.append ( '2438.4 mm' )
 		lengths.append ( partobj.Length )
 		lengths.append ( partobj.Length )
-		placements.append( FreeCAD.Vector (-38.1, 50.80 , -251.3250)  )
-		placements.append( FreeCAD.Vector (-38.1, - partobj.Width.getValueAs('mm') +88.9 , -251.3250)  )
-		rotations.append ( FreeCAD.Rotation (0.7071067811865475, 4.329780281177466e-17, 0.7071067811865476, 4.329780281177467e-17) )
-		rotations.append ( FreeCAD.Rotation (0.7071067811865475, 4.329780281177466e-17, 0.7071067811865476, 4.329780281177467e-17) )
+		placements.append( FreeCAD.Vector (0, 0 , -251.3250)  )
+		placements.append( FreeCAD.Vector (0, - partobj.Width.getValueAs('mm') + board_width.getValueAs( 'mm'), -251.3250)  )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.7071067811865476, -0.7071067811865475) )
+		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.7071067811865476, -0.7071067811865475) )
 
 		#Span joists ( all the same length and orientantion, offset only by centers )
 		
@@ -121,86 +181,36 @@ class Floor_Command:
 			if i == 0 :
 				#first_joist, no span added
 				names.append ( floorjoist.makeFloorJoist( "RimJoist" ).Name )
-				lengths.append ( partobj.Width - board_width * 2)
-				placements.append( FreeCAD.Vector ( 0, 88.90, -251.3250)  )	
-				rotations.append ( FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
+				lengths.append ( partobj.Width - board_width * 2)		#Width of Floor not Board
+				placements.append( FreeCAD.Vector ( board_width,- board_width, -251.3250)  )	
+#				rotations.append ( FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
+				rotations.append ( FreeCAD.Rotation (0.0, 0.0, 1.0,0.0) )
 			if i == 1:
 				#second, add first span.
 				names.append ( floorjoist.makeFloorJoist( "FloorJoist" ).Name )
-				lengths.append ( partobj.Width - board_width *2 )
-				placements.append( FreeCAD.Vector ( start_gap, 88.90, -251.325)  )
-				rotations.append ( FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
+				lengths.append ( partobj.Width - board_width * 2 )
+				placements.append( FreeCAD.Vector ( start_gap,- board_width, -251.325)  )
+#				rotations.append ( FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
+				rotations.append ( FreeCAD.Rotation (0.0, 0.0, 1.0, 0.0) )
 
 			if ( i > 1 and i < ttl_boards -1):
 				#middle_bays
 				names.append ( floorjoist.makeFloorJoist( "FloorJoist" ).Name )
-				lengths.append ( partobj.Width - board_width *2 )
-				placements.append( FreeCAD.Vector ( (board_centers * (i - 1) + start_gap + board_width ) , 88.90, -251.325)  )
-				rotations.append ( FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
+				lengths.append ( partobj.Width - board_width * 2 )
+				placements.append( FreeCAD.Vector ( (board_centers * (i - 1) + start_gap + board_width ) ,- board_width, -251.325)  )
+#				rotations.append ( FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
+				rotations.append ( FreeCAD.Rotation (0.0, 0.0, 1.0, 0.0) )
 
 			if i == ttl_boards -1:
 				#last_joist
 				names.append ( floorjoist.makeFloorJoist( "RimJoist" ).Name )
 				lengths.append ( partobj.Width - board_width *2 )	
 #				print( "Length in mm: ", length )
-				placements.append( FreeCAD.Vector ( length,  88.90, -251.3250)  )
-				rotations.append ( FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
+				placements.append( FreeCAD.Vector ( partobj.Length,  - board_width, -251.3250)  )
+#				rotations.append ( FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
+				rotations.append ( FreeCAD.Rotation (0.0, 0.0, 1.0, 0.0) )
 
-
-#		names.append ( floorjoist.makeFloorJoist( "RimJoist" ).Name )
-#		names.append ( floorjoist.makeFloorJoist( "RimJoist" ).Name )
-
-#		names.append ( floorjoist.makeFloorJoist( "FloorJoist" ).Name )
-#		names.append ( floorjoist.makeFloorJoist( "FloorJoist" ).Name )
-#		names.append ( floorjoist.makeFloorJoist( "FloorJoist" ).Name )
-#		names.append ( floorjoist.makeFloorJoist( "FloorJoist" ).Name )
-#		names.append ( floorjoist.makeFloorJoist( "FloorJoist" ).Name )
-
-#		lengths.append ( '2362.2 mm' )
-#		lengths.append ( '2362.2 mm' )	
-
-#		lengths.append ( '2362.2 mm' )
-#		lengths.append ( '2362.2 mm' )
-#		lengths.append ( '2362.2 mm' )
-#		lengths.append ( '2362.2 mm' )
-#		lengths.append ( '2362.2 mm' )
-
-#		placements.append( FreeCAD.Vector (-38.0999, 50.8, -251.3250)  )
-#		placements.append( FreeCAD.Vector (-38.0999, -2349.4999, -251.3250)  )
-#
-#		placements.append( FreeCAD.Vector (406.4, 88.90, -251.325)  )
-#		placements.append( FreeCAD.Vector (812.8, 88.90, -251.325)  )
-#		placements.append( FreeCAD.Vector (1219.2, 88.90, -251.325)  )
-#		placements.append( FreeCAD.Vector (1625.6, 88.90, -251.325)  )
-#		placements.append( FreeCAD.Vector (2032.0, 88.90, -251.325) )
-
-#		rotations.append ( FreeCAD.Rotation (0.7071067811865475, 4.329780281177466e-17, 0.7071067811865476, 4.329780281177467e-17) )
-#		rotations.append ( FreeCAD.Rotation (0.7071067811865475, 4.329780281177466e-17, 0.7071067811865476, 4.329780281177467e-17) )
-
-#		rotations.append ( FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
-#		rotations.append ( FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
-#		rotations.append ( FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
-#		rotations.append ( FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
-#		rotations.append ( FreeCAD.Rotation (0.5, -0.5, 0.5, 0.5) )
-
-		
-
-		#Panels
-#		names.append ( floorpanel.makePanel( "FloorPanel" ).Name )
-#		names.append ( floorpanel.makePanel( "FloorPanel" ).Name )
-#		names.append ( floorpanel.makePanel( "FloorPanel" ).Name )
-
-#		lengths.append ( '2438.4 mm' )
-#		lengths.append ( '1219.2 mm' )
-#		lengths.append ( '1219.2 mm' )
-
-#		placements.append( FreeCAD.Vector (2.27, 88.90, -60.825)  )
-#		placements.append( FreeCAD.Vector (1219.20, 88.90, -60.825)  )
-#		placements.append( FreeCAD.Vector (1219.20, -2349.49, -60.825)  )
- 
-#		rotations.append (FreeCAD. Rotation (0.0, 0.0, 0.7071067811865476, -0.7071067811865475) )
-#		rotations.append (FreeCAD. Rotation (0.0, 0.0, -0.7071067811865477, 0.7071067811865474) )
-#		rotations.append (FreeCAD. Rotation (0.0, 0.0, 2.220446049250313e-16, -1.0) )
+# Dimension Property for assemblies will turn on and off visible Length Width dimensions
 
 #		dim1 = Draft.makeDimension(FreeCAD.ActiveDocument.RimJoist001,4,0,FreeCAD.Vector(400.0,-2500.0,-88.90))
 #		dim2 = Draft.makeDimension(FreeCAD.ActiveDocument.RimJoist002,4,0,FreeCAD.Vector(-200.0,-2700.0,-88.90))
@@ -213,6 +223,8 @@ class Floor_Command:
 
 
 #TODO: this codes is used for all 'containers' it can be moved to framing class
+		#framing.loadContainer(names, placements, rotations, lengths, expressionslist )
+
 
 		for name, placement in zip ( names, placements ):
 			FreeCAD.ActiveDocument.getObject( name ).Placement.Base = placement
@@ -253,7 +265,6 @@ class Floor:
 
 		obj.Proxy = self
 
-
 	def setProperties(self, obj):
 		# move property setup here 
 		pass
@@ -265,8 +276,8 @@ class Floor:
 		pass
 
 	def execute(self,fp):
+		fp.positionBySupport()
 		fp.recompute()
-#		print ("Framing.Floor executed()")
 
 class ViewProviderFloor:
 	def __init__(self, obj):
