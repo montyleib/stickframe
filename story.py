@@ -83,7 +83,7 @@ class Story():
 
         obj.Proxy = self
 
-        obj.addExtension('App::GroupExtensionPython', self)
+        obj.addExtension('App::GroupExtensionPython')
 
         obj.addProperty("App::PropertyPlacement", "Placement", "Base",
                         "Location of this Member")
