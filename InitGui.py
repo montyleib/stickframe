@@ -1287,10 +1287,11 @@ static char * logo_xpm[] = {
         self.appendMenu("Stick Framing", ["FloorPanel", "Floor", "Wall", "Window", "Door", "Ceiling", "RoofPanel", "Roof", "Stringer", "StairCase"])
 
         self.appendToolbar("Members", ["Stud", "Plate", "Studspacer", "Floor Joist", "Ceiling Joist", "CollarBeam", "Rafter", "Stringer", "Ridgebeam","Story"])
+#        self.appendToolbar("Timber", ["CruckBlade","Purlin","WindBrace","Brace","CornerPost","KingPost","Spurs","Girt","Nogging" ])
+        
         self.appendToolbar("DoorandWindow", ["Header"])
         self.appendToolbar("Panels", ["Panel", "FloorPanel", "CeilingPanel", "RoofPanel"])
         self.appendToolbar("Constructions", ["Floor", "Window", "Door", "Wall", "SimpleWall", "Ceiling", "Roof", "StairCase"])
-        self.appendToolbar("Constructions", ["Window", "Door", "Wall", "SimpleWall", "Ceiling", "Roof", "StairCase"])
         self.appendToolbar("Testing", ["Stringer_Sketch", "Rafter_Sketch"])
 
         self.appendToolbar("FramingReload", ["FramingReload"])

@@ -121,11 +121,10 @@ class Plate:
 				#fp.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, 88.9, 0.0),FreeCAD.Rotation (0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
 				fp.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, 88.9, 0.0),FreeCAD.Rotation (0.0, 0.0, 0.0, 0.0) )
 			if fp.Function == "Top":
-				fp.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, 5.33e-13, 2390.78 + 38.1),FreeCAD.Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )
+				fp.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, 0, 2390.78),FreeCAD.Rotation (0, 0.0, 0.0, 0) )
 			if fp.Function == "Top2":
-				fp.Placement = FreeCAD.Placement( FreeCAD.Vector (88.89, 1.6919798894838616e-14, 2428.88 + 38.1),FreeCAD.Rotation (0.7071067811865476, 0.0, 0.0, -0.7071067811865475) )
+				fp.Placement = FreeCAD.Placement( FreeCAD.Vector (88.9, 0.0, 2428.88),FreeCAD.Rotation (0, 0.0, 0.0, 0) )
 				fp.Length = 2258.81
-
 
 	def execute(self,fp):
 		fp.Shape = Part.makeBox(fp.Length,fp.Height,fp.Width, FreeCAD.Vector(0,0,0), FreeCAD.Vector(0,0,1) )

@@ -140,8 +140,8 @@ class CeilingJoist():
 		fp.positionBySupport()
 
 		
-		FreeCAD.ActiveDocument.recompute()
-		#fp.recompute()
+		#FreeCAD.ActiveDocument.recompute()
+		fp.recompute()
 
 class ViewProviderCeilingJoist:
 	def __init__(self, obj):

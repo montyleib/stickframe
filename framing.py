@@ -101,6 +101,7 @@ def getIconImage( toolname ):
 def defaultAttachment( framing_member ):
 	if isItemSelected():
 		selection = FreeCADGui.Selection.getSelectionEx()
+
 		obj = selection[0].SubElementNames
 		edge_name = obj[0]
 

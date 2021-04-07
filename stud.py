@@ -41,6 +41,7 @@ class Stud_Command:
 		Stud(newstud)
 
 		framing.defaultAttachment( newstud )
+		
 
 		# if framing.isItemSelected():
 		# 	selection = FreeCADGui.Selection.getSelectionEx()

@@ -48,7 +48,7 @@ class Rafter_Sketch_Command:
 		#print 'RafterCommand activated' 
  
 		b=FreeCAD.ActiveDocument.addObject('Sketcher::SketchObjectPython','Rafter') 
-		newsampleobject = RafterSketch(b) 
+		newsampleobject = Rafter_Sketch(b) 
 		b.ViewObject.Proxy=0 
 		FreeCAD.ActiveDocument.recompute()  
 
