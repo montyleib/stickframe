@@ -13,9 +13,8 @@ def makeRidgebeam(name):
 	newridgebeam = FreeCAD.ActiveDocument.addObject("Part::FeaturePython", name )
 	Ridgebeam(newridgebeam)
 	ViewProviderRidgebeam(newridgebeam.ViewObject)	
-#	newridgebeam.Placement = FreeCAD.Placement( FreeCAD.Vector (-2.76826374121, -1152.1267377466597, 3504.7299430953),FreeCAD.Rotation (0.5, 0.5, 0.5, 0.5) )
-	#newridgebeam.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, -1149.3500000001998, 3343.2799999963),FreeCAD.Rotation (0.5, 0.5, 0.5, 0.5) )
-	
+	#newridgebeam.Placement = FreeCAD.Placement( FreeCAD.Vector (-2.76826374121, -1152.1267377466597, 3504.7299430953),FreeCAD.Rotation (0.5, 0.5, 0.5, 0.5) )
+	#newridgebeam.Placement = FreeCAD.Placement( FreeCAD.Vector (0.0, -1149.3500000001998, 3343.2799999963),FreeCAD.Rotation (0.5, 0.5, 0.5, 0.5) )	
 
 	FreeCAD.ActiveDocument.recompute()
 	FreeCADGui.SendMsgToActiveView("ViewFit")
@@ -29,16 +28,6 @@ class Ridgebeam_Command:
 		icon_path = framing.getIconImage( "ridgebeam" ) 	
 
 
-#		image_path = "/" + framing.mod_name + '/icons/ridgebeam.png'
-		# image_path = '/stickframe/icons/ridgebeam.png'
-		# global_path = FreeCAD.getHomePath()+"Mod"
-		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		# icon_path = ""
-
-		# if os.path.exists(user_path + image_path):
-		# 	icon_path = user_path + image_path
-		# elif os.path.exists(global_path + image_path):
-		# 	icon_path = global_path + image_path
 		return {"MenuText": "Ridgebeam",
 				"ToolTip": "Add a Ridgebeam to the Construction",
 				'Pixmap': str(icon_path)}
@@ -58,7 +47,6 @@ class Ridgebeam_Command:
 		#newridgebeam.Placement = FreeCAD.Placement( FreeCAD.Vector (-2.76826374121, -1152.1267377466597, 3504.7299430953 + 76.2),FreeCAD.Rotation (0.5, 0.5, 0.5, 0.5) )
 		newridgebeam.Placement = FreeCAD.Placement( FreeCAD.Vector (-2.76826374121, -1152.1267377466597, 3504.7299430953 + 76.2),FreeCAD.Rotation (0.0, 0.0, 0.0, 0.0) )
 				
-
 		FreeCAD.ActiveDocument.recompute()
 
 
@@ -66,12 +54,12 @@ class Ridgebeam():
 	"""
 	The Ridgebeam Class defines the graphical representation of the object and its underlying shape.
 	"""
+	Placement = FreeCAD.Placement
 
 	def __init__(self, obj):
 
 #		self.ridgebeam_placement = FreeCAD.Placement()
 		
-
 #		print ("Class Variable :Initial placement: ", self.ridgebeam_placement )
 
 		precuts = ['92.25 in', '92.625 in', '93 in','96 in', '104.625 in', '116.625 in']
@@ -90,9 +78,8 @@ class Ridgebeam():
 		obj.addExtension('Part::AttachExtensionPython')
 
 	def onChanged(self, fp, prop):
-		if prop == "Length" or prop == "Width" or prop == "Height":
-			self.Placement.Base = self.Placement.Base.mulitply ( fp.Placement )			
-			fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height)
+		if prop == "Length" or prop == "Width" or prop == "Height" and prop > 0:
+			FreeCAD.ActiveDocument.recompute()
 
 
 	def execute(self, fp):
