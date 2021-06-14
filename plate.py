@@ -50,14 +50,16 @@ class Plate_Command:
 		ViewProviderPlate(newplate.ViewObject)
 
 		if framing.isItemSelected():
-			selection = FreeCADGui.Selection.getSelectionEx()
-			obj = selection[0].SubElementNames
-			edge_name = obj[0]
+			selection = FreeCADGui.Selection.getSelectionEx()			
+
+			if selection[0].HasSubObjects:
+				obj = selection[0].SubElementNames
+				edge_name = obj[0]
+				print( edge_name )
 
 			#One Edge
 			edge_obj = FreeCADGui.Selection.getSelection()[0]
-			edge_shp = FreeCADGui.Selection.getSelection()[0].Shape
-			
+			edge_shp = edge_obj.Shape		
 
 			edge_elt = FreeCADGui.Selection.getSelection ()[0].Shape.Edge1
 
@@ -67,13 +69,16 @@ class Plate_Command:
 					FreeCAD.ActiveDocument.getObject(newplate.Name).MapMode = 'OXY'
 
 			if 	isinstance( edge_shp, Part.Compound ):
-					FreeCAD.ActiveDocument.getObject(newplate.Name).Length = edge_elt.Length	
+					#FreeCAD.ActiveDocument.getObject(newplate.Name).Length = edge_elt.Length	
 					
-					vertex = ""
-					edge = ""
+					#vertex = ""
+					#edge = ""
 			
-					FreeCAD.ActiveDocument.getObject(newplate.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
-					FreeCAD.ActiveDocument.getObject(newplate.Name).MapMode = 'OXY'
+					#FreeCAD.ActiveDocument.getObject(newplate.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
+					#FreeCAD.ActiveDocument.getObject(newplate.Name).MapMode = 'OXY'
+					pass
+					
+								
 					
 
 

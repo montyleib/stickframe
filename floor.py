@@ -46,13 +46,17 @@ class Floor_Command:
 
 	def Activated(self):
 		#TODO: Move this to a makeFloor() command
-		print ("Reloaded")
+		print ("Floor Activated")
 
 		partobj = FreeCAD.ActiveDocument.addObject('App::Part','Floor')
 
-		partobj.addProperty("App::PropertyLength", "Length", "Assembly Dimension","Change the overall length of the Floor").Length = "8 ft"
-		partobj.addProperty("App::PropertyLength", "Width", "Assembly Dimension","Change the overall width of the Floor").Width = "8 ft"
-		partobj.addExtension('Part::AttachExtensionPython')
+		Floor( partobj )
+	
+		#partobj.addProperty("App::PropertyLength", "Length", "Assembly Dimension","Change the overall length of the Floor").Length = "8 ft"
+		#partobj.addProperty("App::PropertyLength", "Width", "Assembly Dimension","Change the overall width of the Floor").Width = "8 ft"
+		#partobj.addExtension('Part::AttachExtensionPython')
+		
+
 
 		names = []
 		lengths = []
@@ -260,22 +264,36 @@ class Floor:
 		#do I add a ViewProvider SOLUTION use App.DocumentObjectGroupPython
 
 		obj.addProperty("App::PropertyEnumeration","FloorLevel","Framing","The level of this flooring group").FloorLevel = floor_levels
-		obj.addProperty("App::PropertyLength","Width","Assembly Dimension","Change the width of the entire floor.").Length = "8 ft"
+		obj.addProperty("App::PropertyLength","Width","Assembly Dimension","Change the width of the entire floor.").Width = "8 ft"
 		obj.addProperty("App::PropertyLength","Length","Assembly Dimension","Change the length of the entire floor.").Length = "8 ft"
+		obj.addExtension('Part::AttachExtensionPython')
 
-		obj.Proxy = self
+		#obj.Proxy = self
+
+		print ( "Floor Init" )
 
 	def setProperties(self, obj):
 		# move property setup here 
 		pass
+		
+	def updateData(self, fp, prop):
+		print ( "Updated data" )		
 
 	def onChanged(self, fp, prop):
+		print( "On Changed Fired" )
 		''' Do something here '''
-		#if prop == "Length" or prop == "Width" or prop == "Height":
+		if prop == "Length" or prop == "Width" or prop == "Height":
 		#	fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height)
-		pass
-
-	def execute(self,fp):
+		#Enumerate Container and apply length/width to each accordingly
+			elements = fp.Outlist
+			for element in elements:
+				print( element.Function )
+				if element.Function == "Floor Joist":
+					element.Length = fp.Length
+					element.Width = fp.Width
+		
+	def execute(self,fp):	
+		print( "execute Fired" )
 		fp.positionBySupport()
 		fp.recompute()
 
@@ -309,7 +327,8 @@ class ViewProviderFloor:
 
 	def onChanged(self, vp, prop):
 		''' Print the name of the property that has changed '''
-#		FreeCAD.Console.PrintMessage("Change property: " + str(prop) + "\n")
+		FreeCAD.Console.PrintMessage("Change property: " + str(prop) + "\n")
+		print ("onChanged ViewProviderFLoor")
 
 	def getIcon(self):
 		''' Return the icon in XMP format which will appear in the tree view. This method is optional

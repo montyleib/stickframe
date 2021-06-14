@@ -1,0 +1,47 @@
+import FreeCAD,FreeCADGui,Part
+from PySide import QtCore,QtGui
+'''
+creating a dialog window in the task panel
+'''
+path_to_ui = os.path.dirname(__file__) + "/SketcherSettings.ui"
+
+class DefinePanel:
+    def __init__(self):
+        self.form = dialogFenster()
+                    
+class dialogFenster(QtGui.QWidget):
+
+    def __init__(self):
+        super().__init__() 
+        self.setWindowTitle("Stair Stringer Dialog")
+
+        self.createGridLayout()
+        
+        windowLayout = QtGui.QVBoxLayout()
+        windowLayout.addWidget(self.horizontalGroupBox)
+        windowLayout.addWidget(self.horizontalGroupBox1)
+        self.setLayout(windowLayout)
+        self.show()
+
+    def createGridLayout(self):
+        self.horizontalGroupBox = QtGui.QGroupBox("Stair Case")
+        layout = QtGui.QGridLayout()
+
+        self.horizontalGroupBox1 = QtGui.QGroupBox("Stair Treads")
+        layout = QtGui.QGridLayout()
+        
+
+        self.PB_01= QtGui.QPushButton(self.horizontalGroupBox)
+        self.PB_01.setText("Button 01")
+        self.PB_01.clicked.connect(self.on_PB_01_clicked) # slot: "PB 01"
+        layout.addWidget(self.PB_01,0,0)
+        
+        self.horizontalGroupBox.setLayout(layout)
+
+    def on_PB_01_clicked(self): # slot: PushButton
+        ''' Push Button 01 clicked  '''
+        print('Push Button 01 clicked')
+        FreeCADGui.Control.closeDialog()
+
+panel=DefinePanel()
+FreeCADGui.Control.showDialog(panel)
