@@ -57,7 +57,7 @@ class CollarBeam_Command:
 		ViewProviderCollarBeam(newcollar.ViewObject)
 		CollarBeam( newcollar )	
 
-		framing.defaultAttachment( newjoist )
+		framing.defaultAttachment( newcollar )
 
 		newcollar.Placement = FreeCAD.Placement( FreeCAD.Vector (35.3317,-523.477,3243.03),FreeCAD.Rotation (0.0, 0.0, 0.7071067811865476, -0.7071067811865475) )
 

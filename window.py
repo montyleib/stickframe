@@ -41,7 +41,6 @@ class Window_Command:
 			return True 
  
 	def Activated(self): 
- 
 		#print 'WindowCommand activated' 
 
 #		grpobj = FreeCAD.activeDocument().addObject('App::DocumentObjectGroupPython','Window')
@@ -52,20 +51,19 @@ class Window_Command:
 		partobj = FreeCAD.ActiveDocument.addObject('App::Part','Window')
 		partobj.addProperty("App::PropertyLength", "Length", "Assembly Dimension","Change the overall Length of the window assembly").Length = "8 ft"
 		partobj.addProperty("App::PropertyLength", "Height", "Assembly Dimension","Change the overall Height of the window assembly").Height = "8 ft"
+
 		partobj.addExtension('Part::AttachExtensionPython')
 
-
-
 		b=FreeCAD.ActiveDocument.addObject('Sketcher::SketchObjectPython','WindowSketch') 
+
 		b.Placement = FreeCAD.Placement(FreeCAD.Vector(0.000000,0.000000,0.000000),FreeCAD.Rotation(-0.707107,0.000000,0.000000,-0.707107))
 		newsampleobject = WindowSketch(b) 
-
-		partobj.addObject ( b )
 
 		framing.defaultAttachment( partobj )
 
 		b.ViewObject.Proxy=0 
 		FreeCAD.ActiveDocument.recompute()  
+		partobj.addObject ( b )
 
 
 
@@ -164,9 +162,7 @@ class Window_Command:
 		partobj.Placement = FreeCAD.Placement ( FreeCAD.Vector (2349.51,-552.45,0 ), FreeCAD.Rotation (-90,0,0 ) )
 
 		FreeCADGui.SendMsgToActiveView("ViewFit")
-		FreeCAD.ActiveDocument.recompute()
-
-		
+		FreeCAD.ActiveDocument.recompute()		
 
 class WindowSketch: 
 	def __init__(self, obj): 
