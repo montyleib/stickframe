@@ -64,7 +64,8 @@ class Stud_Command:
 		# 		FreeCAD.ActiveDocument.getObject(newstud.Name).MapMode = 'OXY'
 
 #		newstud.Placement = FreeCAD.Placement( FreeCAD.Vector (38.1, 88.89, 0.0),FreeCAD.Rotation (0.0, 0.0, 0, 1) )
-		newstud.Placement = FreeCAD.Placement( FreeCAD.Vector (0,0,0),FreeCAD.Rotation (0.0,0.0, 1, 0) )  
+		newstud.Placement = FreeCAD.Placement( FreeCAD.Vector (38.1,0,38.1),FreeCAD.Rotation (0.0,0.0, 1, 0) )
+#		newstud.Placement = FreeCAD.Placement( FreeCAD.Vector (0,0,0),FreeCAD.Rotation (0.0,0.0, 1, 0) )    
 
 		ViewProviderStud(newstud.ViewObject)
 		FreeCAD.ActiveDocument.recompute()

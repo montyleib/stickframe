@@ -70,9 +70,10 @@ class FloorJoist_Command:
 				#FreeCAD.ActiveDocument.getObject(newjoist.Name).Length = edge_elt.Length	
 				FreeCAD.ActiveDocument.getObject(newjoist.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
 				FreeCAD.ActiveDocument.getObject(newjoist.Name).MapMode = 'OYX'
-
+#TODO: Re-orient object so postive X axis runs along edge, not away from vertex.
 #		newjoist.Placement = FreeCAD.Placement( FreeCAD.Vector (0,88.9, -206.37),FreeCAD.Rotation (0.0, -0.0, 0.0, 0.0) )
-		newjoist.Placement = FreeCAD.Placement( FreeCAD.Vector (0,0,0),FreeCAD.Rotation (0.0,0.0, 1, 0.0) )
+		newjoist.Placement = FreeCAD.Placement( FreeCAD.Vector (38.60,88.9,-206.37),FreeCAD.Rotation (0.0,0.0, 1, 0.0) )
+#		newjoist.Placement = FreeCAD.Placement( FreeCAD.Vector (0,0,0),FreeCAD.Rotation (0.0,0.0, 1, 0.0) )
 
 		ViewProviderFloorJoist(newjoist.ViewObject)
 		FreeCAD.ActiveDocument.recompute()
