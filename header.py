@@ -2,7 +2,6 @@ import FreeCAD,FreeCADGui,Part, Draft
 import os, math
 import framing
 
-
 __title__="FreeCAD Framing"
 __author__ = "Paul C. Randall"
 __url__ = "http://www.freecad.info"
@@ -21,22 +20,12 @@ def makeHeader( name ):
 
 class Header_Command:
 	"""
-	The Header_Command class integrates the stud object into the FreeCAD Workbench, StickFrame
+	The Header_Command class integrates the Header object into the FreeCAD Workbench, StickFrame
 	"""
 	def GetResources(self):
+
 		icon_path = framing.getIconImage( "header" ) 	
 
-
-#		image_path = "/" + framing.mod_name + '/icons/header.png'
-		# image_path = '/stickframe/icons/header.png'
-		# global_path = FreeCAD.getHomePath()+"Mod"
-		# user_path = FreeCAD.getUserAppDataDir()+"Mod"
-		# icon_path = ""
-		 
-		# if os.path.exists(user_path + image_path):
-		# 	icon_path = user_path + image_path
-		# elif os.path.exists(global_path + image_path):
-		# 	icon_path = global_path + image_path
 		return {"MenuText": "Header",
 			"ToolTip": "Add a Header to the Construction",
 			'Pixmap' : str(icon_path) } 
@@ -50,46 +39,45 @@ class Header_Command:
 	def Activated(self):
 		newheader = FreeCAD.ActiveDocument.addObject("Part::FeaturePython", "Header")
 		Header(newheader)
+		framing.defaultAttachment( newheader )
 		ViewProviderHeader(newheader.ViewObject)
-		newheader.Placement = FreeCAD.Placement( FreeCAD.Vector (0, -178.594, 2032),FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )	
+		newheader.Placement = FreeCAD.Placement( FreeCAD.Vector (38.10, 0, 2032),FreeCAD.Rotation (0.0, 0.0, 0, 1) )	
 
 
 		FreeCAD.ActiveDocument.recompute()
-		FreeCADGui.SendMsgToActiveView("ViewFit")
+		FreeCADGui.SendMsgToActiveView("ViewFit")	
+		FreeCADGui.activeDocument().activeView().viewIsometric()
 
 class Header():
 	"""
 	The Header Class defines the graphical representation of the object and its underlying shape.
 	"""
+	Placement = FreeCAD.Placement
 
 	def __init__(self, obj):
 
-#		self.Placement = FreeCAD.Placement()
-
 		obj.addProperty("App::PropertyLength","Length","Lumber Dimension","Change the length of the Header").Length = "36 in"
 		obj.addProperty("App::PropertyLength","Width","Lumber Dimension","Lumber Edge Dimension").Width="1.5 in"
-		obj.setEditorMode("Width", 1)
 		obj.addProperty("App::PropertyLength","Height","Lumber Dimension", "Lumber Face Dimension").Height="7.5 in"
-#		obj.addProperty("App::PropertyLength","Centers","Construction Dimensison", "Construction Dimension").Centers="16 in"
-#		obj.setEditorMode("Centers", 1)
+		obj.addProperty("App::PropertyLength","Centers","Construction Dimensison", "Construction Dimension").Centers="16 in"
+
 
 		obj.addProperty("App::PropertyFloat","Cost","Member","Enter the cost of the construction member").Cost = 2.99
 		obj.addProperty("App::PropertyEnumeration","Function","Member","Where this member is being used").Function = ['Door Header', 'Window Header', 'Header']
 		obj.addProperty("App::PropertyString","MemberName","Member","Where this member is being used").MemberName = "Header"
 		obj.Proxy = self
 
-#		obj.addExtension('Part::AttachExtensionPython', obj)
+		obj.addExtension('Part::AttachExtensionPython')
 		
 	def onChanged(self, fp, prop):
 		if prop == "Length" or prop == "Width" or prop == "Height":
-#			self.Placement.Base = self.Placement.Base.multiply ( fp.Placement.Base )	
-#			fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height)
+#			#self.Placement.Base = self.Placement.Base.multiply ( fp.Placement.Base )	
+#			#fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height)
 			FreeCAD.ActiveDocument.recompute()
-#			pass
 
 	def execute(self,fp):
 		fp.Shape = Part.makeBox(fp.Length,fp.Width,fp.Height)# FreeCAD.Vector(0,0,0),FreeCAD.Vector(0,1,0 ) )
-		#fp.recompute()
+		fp.positionBySupport()
 
 
 class ViewProviderHeader:

@@ -65,8 +65,7 @@ class Story_Command:
         #:TODO: Create a Transaction
 
         #newstory = FreeCAD.ActiveDocument.addObject("App::DocumentObjectGroupPython", "Story")
-        newstory = FreeCAD.ActiveDocument.addObject("App::GeometryPython",
-                                                    "BuildingPart")
+        newstory = FreeCAD.ActiveDocument.addObject("App::GeometryPython", "BuildingPart")
 
         FreeCADGui.addModule("Draft")
         Draft.autogroup(newstory)
@@ -87,8 +86,11 @@ class Story():
 
         obj.addProperty("App::PropertyPlacement", "Placement", "Base",
                         "Location of this Member")
-        obj.addProperty("App::PropertyString", "MemberName", "Member",
-                        "Where this member is being used").MemberName = "Story"
+                        
+        obj.addProperty("App::PropertyPlacement", "Centers", "Base", "Standard distance between the centers of each lumber member")                       
+                        
+        obj.addProperty("App::PropertyString", "MemberName", "Member",        
+                        "The builing level, ie., 1st Story/ 1st Floor").MemberName = "Story"
 
         ViewProviderStory(obj.ViewObject)
         obj.ViewObject.Visibility = True

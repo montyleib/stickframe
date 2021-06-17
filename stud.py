@@ -25,7 +25,7 @@ class Stud_Command:
 	def GetResources(self):
 
 		icon_path = framing.getIconImage( "stud" ) 	
-	
+
 		return {"MenuText": "Stud",
 			"ToolTip": "Add a Stud to the Construction",
 			'Pixmap': str(icon_path)}
@@ -39,7 +39,6 @@ class Stud_Command:
 	def Activated(self):
 		newstud = FreeCAD.ActiveDocument.addObject("Part::FeaturePython","Stud")
 		Stud(newstud)
-
 		framing.defaultAttachment( newstud )
 		
 

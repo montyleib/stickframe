@@ -85,13 +85,18 @@ class Door_Command:
 
 		placements = []
 
+#Placements are overidden by Sketch attachment
+
 		placements.append ( FreeCAD.Vector (38.1, 38.1, 0.0) )
 		placements.append ( FreeCAD.Vector (89.3759784728, -592.129214178, -8e-15) )
-		placements.append ( FreeCAD.Vector (89.37597847279994, -1709.729214178, 0.0) )
-		placements.append ( FreeCAD.Vector (89.37597847279994, -1747.829214178, 0.0) )
+#		placements.append ( FreeCAD.Vector (89.37597847279994, -1709.729214178, 0.0) )
+#		placements.append ( FreeCAD.Vector (89.37597847279994, -1747.829214178, 0.0) )
+		placements.append ( FreeCAD.Vector (0, 0, 0.0) )
+		placements.append ( FreeCAD.Vector (0, 0, 0.0) )
 
-		placements.append ( FreeCAD.Vector (0.475978472800008, -554.0292141780001, 2098.67) )
-		placements.append ( FreeCAD.Vector (54.45097847279999, -554.0292141780001, 2098.67) )
+
+		placements.append ( FreeCAD.Vector (300, 0, 2098.67) )
+		placements.append ( FreeCAD.Vector (0, 0, 2098.67) )
 #		placements.append ( FreeCAD.Vector (54.4509784728025, -554.0292141780001, 2098.67) )
 
 
@@ -122,37 +127,37 @@ class Door_Command:
 		expressions = []
 
 		expressions.append( ['Placement.Base.x','DoorSketch.Shape.Edge4.Vertex1.X'] )
-		expressions.append( ['Placement.Base.y','DoorSketch.Shape.Edge4.Vertex1.Y + 38.09'] )
+		expressions.append( ['Placement.Base.y','DoorSketch.Shape.Edge4.Vertex1.Y + 38.09 + 38.09'] )
 		expressions.append( ['Placement.Base.z','DoorSketch.Shape.Edge4.Vertex1.Z'] )
 		expressionslist.append( expressions )
 		expressions = []
 		expressions.append( ['Length','DoorSketch.Constraints.RoughOpeningHeight'] )
 		expressions.append( ['Placement.Base.x','DoorSketch.Shape.Edge4.Vertex1.X'] )
-		expressions.append( ['Placement.Base.y','DoorSketch.Shape.Edge4.Vertex1.Y'] )
+		expressions.append( ['Placement.Base.y','DoorSketch.Shape.Edge4.Vertex1.Y + 38.09'] )
 		expressions.append( ['Placement.Base.z','DoorSketch.Shape.Edge4.Vertex1.Z'] )
 		expressionslist.append( expressions )
 		expressions = []
 		expressions.append( ['Length','DoorSketch.Constraints.RoughOpeningHeight'] )
 		expressions.append( ['Placement.Base.x','DoorSketch.Shape.Edge2.Vertex2.X'] )
-		expressions.append( ['Placement.Base.y','DoorSketch.Shape.Edge2.Vertex2.Y - 38.09'] )
+		expressions.append( ['Placement.Base.y','DoorSketch.Shape.Edge2.Vertex2.Y'] )
 		expressions.append( ['Placement.Base.z','DoorSketch.Shape.Edge2.Vertex2.Z'] )
 		expressionslist.append( expressions )
 		expressions = []
 		expressions.append( ['Placement.Base.x','DoorSketch.Shape.Edge2.Vertex2.X'] )
-		expressions.append( ['Placement.Base.y','DoorSketch.Shape.Edge2.Vertex2.Y - 38.09 - 38.09'] )
+		expressions.append( ['Placement.Base.y','DoorSketch.Shape.Edge2.Vertex2.Y - 38.09'] )
 		expressions.append( ['Placement.Base.z','DoorSketch.Shape.Edge2.Vertex2.Z'] )
 		expressionslist.append( expressions )
 		expressions = []
 		expressions.append( ['Length','DoorSketch.Constraints.RoughOpeningWidth + 3"'] )
 		expressions.append( ['Placement.Base.x','DoorSketch.Shape.Edge1.Vertex1.X - 38.09'] )
 		expressions.append( ['Placement.Base.y','DoorSketch.Shape.Edge1.Vertex1.Y + 38.09'] )
-		expressions.append( ['Placement.Base.z','DoorSketch.Shape.Edge1.Vertex1.Z + 38.09'] )
+		expressions.append( ['Placement.Base.z','DoorSketch.Shape.Edge1.Vertex1.Z'] )
 		expressionslist.append( expressions )
 		expressions = []
 		expressions.append( ['Length','DoorSketch.Constraints.RoughOpeningWidth + 3"'] )
 		expressions.append( ['Placement.Base.x','DoorSketch.Shape.Edge1.Vertex1.X - 38.09 - 38.09 - 12.7'] )
 		expressions.append( ['Placement.Base.y','DoorSketch.Shape.Edge1.Vertex1.Y + 38.09'] )
-		expressions.append( ['Placement.Base.z','DoorSketch.Shape.Edge1.Vertex1.Z + 38.09'] )
+		expressions.append( ['Placement.Base.z','DoorSketch.Shape.Edge1.Vertex1.Z'] )
 		expressionslist.append( expressions )
 		expressions = []
 			
