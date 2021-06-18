@@ -17,7 +17,6 @@ class Window_Command:
 	def GetResources(self):
 		icon_path = framing.getIconImage( "window" ) 	
 
-
 #		image_path = "/" + framing.mod_name + '/icons/window.png'
 		# image_path = '/stickframe/icons/window.png' 
 		# global_path = FreeCAD.getHomePath()+'Mod' 
@@ -79,8 +78,8 @@ class Window_Command:
 		names.append ( stud.makeStud('KingStud').Name )
 		names.append ( stud.makeStud('JackStud').Name )
 		names.append ( stud.makeStud('JackStud').Name )
-		names.append ( stud.makeStud('TopCripple').Name )
-		names.append ( stud.makeStud('TopCripple').Name )
+#		names.append ( stud.makeStud('TopCripple').Name )
+#		names.append ( stud.makeStud('TopCripple').Name )
 		names.append ( stud.makeStud('BottomCripple').Name )
 		names.append ( stud.makeStud('BottomCripple').Name )
 		names.append ( stud.makeStud('SillPlate').Name )
@@ -91,30 +90,32 @@ class Window_Command:
 		lengths.append ( '2352.675 mm' )
 		lengths.append ( '2057.4 mm' )
 		lengths.append ( '2057.4 mm' )
-		lengths.append ( '104.775 mm' )
-		lengths.append ( '104.775 mm' )
+#		lengths.append ( '104.775 mm' )
+#		lengths.append ( '104.775 mm' )
 		lengths.append ( '774.7 mm' )
 		lengths.append ( '774.7 mm' )
 		lengths.append ( '1079.5 mm' )
 		lengths.append ( '1155.7 mm' )
 		lengths.append ( '1155.7 mm' )
+		
+#TODO add sketch attachments
 
 		placements.append( FreeCAD.Vector (0.0, 88.9, 0.0)  )
 		placements.append( FreeCAD.Vector (1193.8, 88.9, 0.0)  )
 		placements.append( FreeCAD.Vector (38.1, 88.9, 0.0)  )
 		placements.append( FreeCAD.Vector (1155.7, 88.9, 0.0)  )
-		placements.append( FreeCAD.Vector (38.1, 88.9, 2247.9)  )
-		placements.append( FreeCAD.Vector (1155.7, 88.9, 2247.9)  )
-		placements.append( FreeCAD.Vector (76.2, 88.9, 0.0)  )
-		placements.append( FreeCAD.Vector (1117.6, 88.9, 0.0)  )
+		#placements.append( FreeCAD.Vector (38.1, 88.9, 2247.9)  )
+		#placements.append( FreeCAD.Vector (1155.7, 88.9, 2247.9)  )
+		#placements.append( FreeCAD.Vector (76.2, 88.9, 0.0)  )
+		#placements.append( FreeCAD.Vector (1117.6, 88.9, 0.0)  )
 
 
 #Placement [Pos=(0,50.825,2095.5), Yaw-Pitch-Roll=(0,0,0)]
 
-		placements.append( FreeCAD.Vector (76.20000000000003, -1.1964104535170369e-14, 774.6999999999999)  )
+		#placements.append( FreeCAD.Vector (76.20000000000003, -1.1964104535170369e-14, 774.6999999999999)  )
 
-		placements.append( FreeCAD.Vector (38.1, 50.825, 2057.4)  )
-		placements.append( FreeCAD.Vector (38.1, 0, 2057.4)  )
+		#placements.append( FreeCAD.Vector (38.1, 50.825, 2057.4)  )
+		#placements.append( FreeCAD.Vector (38.1, 0, 2057.4)  )
 
 
 		#rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
@@ -122,8 +123,8 @@ class Window_Command:
 		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
 		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
 		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
-		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
+#		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
+#		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
 		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
 		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0, 0) )
 		
@@ -135,9 +136,93 @@ class Window_Command:
 		#rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
 		#rotations.append ( FreeCAD.Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
 		
-		rotations.append ( FreeCAD.Rotation (0.7071067811865476, 5.551115123125784e-17,  0.7071067811865476,  5.551115123125784e-17) )
+#		rotations.append ( FreeCAD.Rotation (0.7071067811865476, 5.551115123125784e-17,  0.7071067811865476,  5.551115123125784e-17) )
+		rotations.append ( FreeCAD.Rotation (-3.453065187164598e-17, 0.7071067811865477, -2.0980499359611848e-17, 0.7071067811865475) )
+
+
+
 		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.0, 1.0) )
 		rotations.append ( FreeCAD.Rotation (0.0, 0.0, 0.0, 1.0) )
+		
+		expressionslist = []
+		expressions = []
+
+		#KingStudS
+		expressions.append( ['Placement.Base.x','WindowSketch.Shape.Edge4.Vertex1.X - 76.18'] )
+		expressions.append( ['Placement.Base.y','WindowSketch.Shape.Edge4.Vertex1.Y'] )
+#		expressions.append( ['Placement.Base.z','WindowSketch.Shape.Edge4.Vertex1.Z'] )
+		expressionslist.append( expressions )
+		expressions = []
+		
+		expressions.append( ['Placement.Base.x','WindowSketch.Shape.Edge2.Vertex1.X + 38.09'] )
+		expressions.append( ['Placement.Base.y','WindowSketch.Shape.Edge2.Vertex1.Y'] )
+#		expressions.append( ['Placement.Base.z','WindowSketch.Shape.Edge4.Vertex1.Z'] )
+		expressionslist.append( expressions )
+		expressions = []
+		
+		#JackStudS
+		expressions.append( ['Length','WindowSketch.Constraints.RoughOpeningHeight + WindowSketch.Constraints.RoughOpeningSillHeight'] )
+		expressions.append( ['Placement.Base.x','WindowSketch.Shape.Edge4.Vertex1.X - 38.09'] )
+		expressions.append( ['Placement.Base.y','WindowSketch.Shape.Edge4.Vertex1.Y'] )
+#		expressions.append( ['Placement.Base.z','WindowSketch.Shape.Edge4.Vertex1.Z'] )
+		expressionslist.append( expressions )
+		expressions = []
+		
+		expressions.append( ['Length','WindowSketch.Constraints.RoughOpeningHeight + WindowSketch.Constraints.RoughOpeningSillHeight'] )
+		expressions.append( ['Placement.Base.x','WindowSketch.Shape.Edge2.Vertex2.X'] )
+		expressions.append( ['Placement.Base.y','WindowSketch.Shape.Edge2.Vertex2.Y'] )
+#		expressions.append( ['Placement.Base.z','WindowSketch.Shape.Edge2.Vertex2.Z'] )
+		expressionslist.append( expressions )
+		expressions = []
+		
+		#Top
+#		expressions.append( ['Placement.Base.x','WindowSketch.Shape.Edge1.Vertex1.X - 38.09'] )
+#		expressions.append( ['Placement.Base.y','WindowSketch.Shape.Edge1.Vertex1.Y'] )
+#		expressions.append( ['Placement.Base.z','WindowSketch.Shape.Edge1.Vertex1.Z + 190.50'] )
+#		expressionslist.append( expressions )
+#		expressions = []
+		
+#		expressions.append( ['Placement.Base.x','WindowSketch.Shape.Edge1.Vertex2.X'] )
+#		expressions.append( ['Placement.Base.y','WindowSketch.Shape.Edge1.Vertex2.Y'] )
+#		expressions.append( ['Placement.Base.z','WindowSketch.Shape.Edge1.Vertex2.Z + 190.50'] )
+#		expressionslist.append( expressions )
+#		expressions = []
+		
+		#Bottom
+		expressions.append( ['Placement.Base.x','WindowSketch.Shape.Edge3.Vertex1.X - 38.09'] )
+		expressions.append( ['Placement.Base.y','WindowSketch.Shape.Edge3.Vertex1.Y'] )
+#		expressions.append( ['Placement.Base.z','WindowSketch.Shape.Edge3.Vertex1.Z'] )
+		expressionslist.append( expressions )
+		expressions = []
+		
+		expressions.append( ['Placement.Base.x','WindowSketch.Shape.Edge3.Vertex2.X'] )
+		expressions.append( ['Placement.Base.y','WindowSketch.Shape.Edge3.Vertex2.Y'] )
+#		expressions.append( ['Placement.Base.z','WindowSketch.Shape.Edge3.Vertex2.Z'] )
+		expressionslist.append( expressions )
+		expressions = []
+
+		#SillPlate
+		expressions.append( ['Placement.Base.x','WindowSketch.Shape.Edge3.Vertex2.X'] )
+		expressions.append( ['Placement.Base.y','WindowSketch.Shape.Edge3.Vertex2.Y'] )
+		expressions.append( ['Placement.Base.z','WindowSketch.Shape.Edge3.Vertex2.Z'] )
+		expressionslist.append( expressions )
+		expressions = []
+		
+		#Headers
+		expressions.append( ['Placement.Base.x','WindowSketch.Shape.Edge1.Vertex1.X - 38.09'] )
+		expressions.append( ['Placement.Base.y','WindowSketch.Shape.Edge1.Vertex1.Y - 38.09'] )
+		expressions.append( ['Placement.Base.z','WindowSketch.Shape.Edge1.Vertex1.Z'] )
+		expressionslist.append( expressions )
+		expressions = []
+		
+		expressions.append( ['Placement.Base.x','WindowSketch.Shape.Edge1.Vertex1.X - 38.09'] )
+		expressions.append( ['Placement.Base.y','WindowSketch.Shape.Edge1.Vertex1.Y - 76.18 - 12.7' ] )
+		expressions.append( ['Placement.Base.z','WindowSketch.Shape.Edge1.Vertex1.Z'] )
+		expressionslist.append( expressions )
+		expressions = []
+		
+
+
 
 
 		for name, placement in zip ( names, placements ):
