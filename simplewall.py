@@ -87,14 +87,36 @@ class SimpleWall_Command:
 		length = partobj.Length.getValueAs( 'mm' ) 
 		#length = partobj.Length.getValueAs( 'mm' ) - (stud_thickness.getValueAs( 'mm') * 2 ) 
 
-		gaps = math.ceil ( length.Value / stud_centers )
+#		print( length )
+#		print( stud_width )
+#		print( stud_centers )
+		
+		
+		ln = length.Value
+		sw = stud_width.Value * 2
+		sc = stud_centers.Value
+		
+#		print( ln )
+#		print( sw )
+#		print( sc )
+		
+#		print ( ln - sw )
+		
+		adj_ln = ln -sw
+
+		#math.ceil did not like to work with multiple operations as the arguement
+
+#		gaps = math.ceil ( length.Value / stud_centers.Value )
+		gaps = math.ceil ( adj_ln / sc )
+
 		ttl_studs = gaps + 1
-		span_gaps = gaps - 2
+		span_gaps = gaps - 1
 		
 		gaps_length = length.Value/stud_centers
 
 		span_gap = stud_centers - stud_thickness
 		start_gap = stud_centers - stud_thickness - ( stud_thickness/2 )
+
 
 		end_gap = length - ( span_gap.getValueAs( 'mm' ) * span_gaps ) - start_gap.getValueAs( 'mm' ) - ( stud_width.getValueAs( 'mm') * ttl_studs)
 
@@ -116,9 +138,9 @@ class SimpleWall_Command:
 		#lengths.append ( length + ( stud_width.getValueAs( 'mm') * 2 ) )
 
 
-		placements.append( FreeCAD.Vector (88.90, 0.0, - 38.10)  )  # plate
-		placements.append( FreeCAD.Vector (88.90, 5.33e-13, 2324.1 )  )  # plate
-		placements.append( FreeCAD.Vector (0.0, 0.0, 2324.1 + 38.1  )  )  # plate
+		placements.append( FreeCAD.Vector (0, 0.0, - 38.10)  )  # plate
+		placements.append( FreeCAD.Vector (0, 5.33e-13, 2324.1 )  )  # plate
+		placements.append( FreeCAD.Vector (-88.90, 0.0, 2324.1 + 38.1  )  )  # plate
 
 #		rotations.append (FreeCAD. Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )  # plate
 #		rotations.append (FreeCAD. Rotation (-0.7071067811865475, 0.0, 0.0, 0.7071067811865476) )  # plate
@@ -134,14 +156,14 @@ class SimpleWall_Command:
 				#first_stud, no span added
 				names.append ( stud.makeStud( "Starter" ).Name )
 				lengths.append ( partobj.Height - stud_thickness * 3)
-				placements.append( FreeCAD.Vector ( stud_width, 88.90, 0)  )		
+				placements.append( FreeCAD.Vector ( 0, 88.90, 0)  )		
 				rotations.append (FreeCAD. Rotation (0.0, 0.0, 0, 0.0) )
 
 			if i == 1:
 				#second, add first span.
 				names.append ( stud.makeStud( "Stud" ).Name )
 				lengths.append ( partobj.Height - stud_thickness * 3 )
-				placements.append( FreeCAD.Vector ( stud_width + start_gap, 88.90, 0)  )
+				placements.append( FreeCAD.Vector ( start_gap, 88.90, 0)  )
 				rotations.append (FreeCAD. Rotation (0.0, 0.0, 0, 0.0) )
 #				rotations.append (FreeCAD. Rotation (0.0, 0.0, -0.7071067811865475, 0.7071067811865476) )
 
@@ -150,14 +172,15 @@ class SimpleWall_Command:
 				names.append ( stud.makeStud( "Stud" ).Name )
 #				lengths.append ( partobj.Height - stud_thickness * 3 )
 				lengths.append ( 2324.10 )
-				placements.append( FreeCAD.Vector ( stud_width + (stud_centers * (i - 1) + start_gap + stud_thickness ) , 88.90, 0)  )
+				placements.append( FreeCAD.Vector ( stud_centers * (i - 1) + start_gap + stud_thickness  , 88.90, 0)  )
 				rotations.append (FreeCAD. Rotation (0.0, 0.0, 0, 0.0) )
 
 			if i == ttl_studs -1:
 				#last stud
 				names.append ( stud.makeStud( "End" ).Name )
 				lengths.append ( partobj.Height - stud_thickness * 3 )	
-				placements.append( FreeCAD.Vector ( length - 38.09 - 88.90 ,  88.90, 0)  )
+				placements.append( FreeCAD.Vector ( length - 38.09 - 177.80 ,  88.90, 0)  )
+#				placements.append( FreeCAD.Vector ( length,  88.90, 0)  )
 				rotations.append (FreeCAD. Rotation (0.0, 0.0, 0, 0.0) )
 
 #		names.append( stud.makeStud ( 'Starter' ).Name)
