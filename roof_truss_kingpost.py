@@ -48,7 +48,7 @@ class KingPost:
 		newsketch = FreeCAD.ActiveDocument.addObject('Sketcher::SketchObjectPython','KingPostSketch') 
 		KingPostSketch(newsketch) 
 		newsketch.ViewObject.Proxy=0
-		newsketch.Placement = FreeCAD.Placement(FreeCAD.Vector(0.000000,0.000000,0.000000),FreeCAD.Rotation(1,0,0,90))
+		newsketch.Placement = FreeCAD.Placement(FreeCAD.Vector(0.000000,0.000000,0.000000),FreeCAD.Rotation(0.5,0.5,0.5,0.5))
 
 		newsketch.Visibility = True
 

@@ -55,7 +55,7 @@ class Assymetric:
 		newsketch = FreeCAD.ActiveDocument.addObject('Sketcher::SketchObjectPython','AssymetricSketch') 
 		AssymetricSketch(newsketch) 
 		newsketch.ViewObject.Proxy=0
-		newsketch.Placement = FreeCAD.Placement(FreeCAD.Vector(0.000000,0.000000,0.000000),FreeCAD.Rotation(1,0,0,90))
+		newsketch.Placement = FreeCAD.Placement(FreeCAD.Vector(0.000000,0.000000,0.000000),FreeCAD.Rotation(0.500000, 0.500000, 0.500000, 0.500000))
 
 		newsketch.Visibility = True
 
