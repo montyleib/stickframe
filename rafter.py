@@ -1,12 +1,9 @@
-import FreeCAD
-import FreeCADGui
-import Part
-import Draft
+import FreeCAD,FreeCADGui, Part, Draft
 import Sketcher
 import os
 
-import rafter_sketch
-import framing
+import framing, rafter_sketch
+
 
 __title__ = "FreeCAD Stick Framers Toolkit"
 __author__ = "Paul Randall"
@@ -16,24 +13,6 @@ __command_name__ = "Rafter"  # Name of the command to appear in Toolbar
 __command_group__ = ""  # Name of Toolbar to assign the command
 
 
-#def makeRafter(name):
-
-#	newgrpobj = FreeCAD.ActiveDocument.addObject( "App::DocumentObjectGroupPython", "Rafter")
-#	newsketch = FreeCAD.ActiveDocument.addObject( 'Sketcher::SketchObjectPython', "RafterSketch")
-#	(newsketch)
-
-#	moveobj = FreeCAD.ActiveDocument.getObject(newsketch.Name)
-#	moveobj.Placement = FreeCAD.Placement(FreeCAD.Vector(1.50019e-13, -1111.25, 1993.25 + 38.1), FreeCAD.Rotation( 0.5015264712616718, -0.4992350141084935, -0.4992350141084935, 0.5000000000000001))
-
-
-
-#	newgrpobj.addObject(extrusion)
-#	ViewProviderRafter(newgrpobj.ViewObject)
-#	FreeCAD.ActiveDocument.recompute()
-
-#	FreeCADGui.SendMsgToActiveView("ViewFit")
-
-#	return newgrpobj
 
 def makeRafter(name):
 	newrafter = FreeCAD.ActiveDocument.addObject("App::DocumentObjectGroupPython", "Rafter")
@@ -50,16 +29,6 @@ class Rafter_Command:
 	def GetResources(self):
 		icon_path = framing.getIconImage( "rafter" ) 	
 
-#		image_path = "/" + framing.mod_name + '/icons/rafter.png'
-		# image_path = '/stickframe/icons/rafter.png'
-		# global_path = FreeCAD.getHomePath()+'Mod'
-		# user_path = FreeCAD.getUserAppDataDir()+'Mod'
-		# icon_path = ''
-
-		# if os.path.exists(user_path + image_path):
-		# 	icon_path = user_path + image_path
-		# elif os.path.exists(global_path + image_path):
-		# 	icon_path = global_path + image_path
 		return {'MenuText': 'Rafter',
 			'ToolTip': 'Add a roof rafter to the construction.',
 			'Pixmap': str(icon_path)}

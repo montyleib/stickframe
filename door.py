@@ -84,6 +84,12 @@ class Door_Command:
 #		lengths.append ( '1231.9 mm' )
 
 		placements = []
+		
+		def onChanged(self, fp, prop):
+			FreeCAD.Console.PrintLog( "App::Part - onChanged()" )
+			print ("App:Part - onChangeed ")
+		
+		
 
 #Placements are overidden by Sketch attachment
 
@@ -126,6 +132,8 @@ class Door_Command:
 		expressionslist = []
 		expressions = []
 
+		#TODO: Explicit 'DoorSketch' string needs to be replaced with the instance name.
+
 		expressions.append( ['Placement.Base.x','DoorSketch.Shape.Edge4.Vertex1.X'] )
 		expressions.append( ['Placement.Base.y','DoorSketch.Shape.Edge4.Vertex1.Y + 38.09 + 38.09'] )
 		expressions.append( ['Placement.Base.z','DoorSketch.Shape.Edge4.Vertex1.Z'] )
@@ -161,6 +169,7 @@ class Door_Command:
 		expressionslist.append( expressions )
 		expressions = []
 			
+			
 		for name, expressions in zip( names, expressionslist):
 		#	print ( name )
 			for label, expression in expressions:
@@ -170,6 +179,14 @@ class Door_Command:
 				obj.setExpression ( label, expression  )
 
 		#Placement [Pos=(35.1117,-555.822,1.12508), Yaw-Pitch-Roll=(0,0,0)]
+		
+		
+
+
+		#TODO: get name of current instance, newsketch doesnt have Name attribute, perhaps until after recompute.
+		#But "DoorSketch" will only get the right object with one door.
+		sketch_instance = FreeCAD.ActiveDocument.getObject( "DoorSketch")
+#		sketch_instance.Constraints.RoughOpeningLength.setExpression ( 'Length', 'partobject.Length')
 
 		partobj.Placement = FreeCAD.Placement ( FreeCAD.Vector ( 35.1117,-555.822,1.12508 ), FreeCAD.Rotation (0,0,0 ) )
 
@@ -208,6 +225,15 @@ class DoorSketch:
 		named_constraint.Name = "RoughOpeningHeight"
 		constraintList.append( named_constraint )
 		constraintList.append( Sketcher.Constraint('PointOnObject',1,2,-1 ) )
+		
+#		expressionslist = []
+#		expressions = []
+		
+#		expressions.append( ['Placement.Base.x','DoorSketch.Shape.Edge1.Vertex1.X - 38.09'] )
+
+#		expressionslist.append( expressions )
+#		expressions = []
+		
 
 		obj.addGeometry( geometryList, False)
 		obj.addGeometry( constructionList, True)

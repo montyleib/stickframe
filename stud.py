@@ -95,7 +95,7 @@ class Stud():
 		obj.addExtension('Part::AttachExtensionPython' )
 
 	def onChanged(self, fp, prop):
-		if prop == "Length" or prop == "Width" or prop == "Height" and prop > 0:
+		if prop == "Length" or prop == "Width" or prop == "Height":  #and prop > 0:
 			FreeCAD.ActiveDocument.recompute()
 		if prop == "Function":
 			if fp.Function == "Corner":

@@ -12,7 +12,7 @@ __command_group__= "" #Name of Toolbar to assign the command
 class KingPost_Command:
 	def GetResources(slf):
 		#print 'Run getResources() for KingPost_Command' 
-		image_path = '/sketchershapes/icons/kingpost.png' 
+		image_path = '/stickframe/icons/kingpost.png' 
 		global_path = FreeCAD.getHomePath()+'Mod' 
 		user_path = FreeCAD.getUserAppDataDir()+'Mod' 
 		icon_path = '' 
@@ -39,6 +39,7 @@ class KingPost_Command:
  
 		b=FreeCAD.ActiveDocument.addObject('Sketcher::SketchObjectPython','KingPost') 
 		newsampleobject = KingPost(b) 
+		newsampleobject.Placement = App.Placement(App.Vector(0.000000, 0.000000, 0.000000), App.Rotation(0.500000, 0.500000, 0.500000, 0.500000))
 		b.ViewObject.Proxy=0 
 		FreeCAD.ActiveDocument.recompute()  
 class KingPost: 
@@ -50,6 +51,8 @@ class KingPost:
 		obj.Proxy = self
 		App = FreeCAD
 		tmpCircle = None
+		
+	
 		geometryList = [] 
 		constructionList = [] 
 		constraintList = [] 
@@ -68,11 +71,21 @@ class KingPost:
 		constraintList.append( Sketcher.Constraint('Coincident',-1,1,3,1 ) )
 		constraintList.append( Sketcher.Constraint('Coincident',3,2,0,2 ) )
 		constraintList.append( Sketcher.Constraint('Vertical',3 ) )
+		
+		named_constraint = Sketcher.Constraint('DistanceX',0,1,3,1,2438.4)
+		named_constraint.Name = "Run"
+		constraintList.append( named_constraint )
+		named_constraint = Sketcher.Constraint('DistanceY',3,1,3,2,1219.2)
+		named_constraint.Name = "Rise"
+		constraintList.append( named_constraint )
 
 
 		obj.addGeometry( geometryList, False)
 		obj.addGeometry( constructionList, True)
 		obj.addConstraint( constraintList )
+		
+
+
 
 	def onChanged(self, fp, prop):
 		name = str(prop)

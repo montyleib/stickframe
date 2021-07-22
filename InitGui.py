@@ -1280,11 +1280,15 @@ static char * logo_xpm[] = {
         import staircase
         import stringer_sketch
         import rafter_sketch
+        import roof_truss_kingpost, roof_truss_queenpost,roof_truss_assymetric, roof_truss_inverted, roof_truss_monoa, roof_truss_monob, roof_truss_openplan, roof_truss_storage
 
+        import floorplanview
         import framingreload
 
         self.appendMenu("Stick Framing", ["Stud", "Plate", "Studspacer", "Floor Joist", "Ceiling Joist", "CollarBeam", "Rafter", "Stringer", "Ridgebeam", "Story"])
         self.appendMenu("Stick Framing", ["FloorPanel", "Floor", "Wall", "Window", "Door", "Ceiling", "RoofPanel", "Roof", "Stringer", "StairCase"])
+        self.appendMenu("Stick Framing Roof Trusses", ["KingPost","QueenPost","MonoA","MonoB","CruckBlade","Assymetric","Inverted","OpenPlan","Storage"])
+        self.appendMenu("Stick Framing Utilites", ["FloorPlanView"])
 
         self.appendToolbar("Members", ["Stud", "Plate", "Studspacer", "Floor Joist", "Ceiling Joist", "CollarBeam", "Rafter", "Stringer", "Ridgebeam","Story"])
 #        self.appendToolbar("Timber", ["CruckBlade","Purlin","WindBrace","Brace","CornerPost","KingPost","Spurs","Girt","Nogging" ])
@@ -1292,9 +1296,10 @@ static char * logo_xpm[] = {
         self.appendToolbar("DoorandWindow", ["Header"])
         self.appendToolbar("Panels", ["Panel", "FloorPanel", "CeilingPanel", "RoofPanel"])
         self.appendToolbar("Constructions", ["Floor", "Window", "Door", "Wall", "SimpleWall", "Ceiling", "Roof", "StairCase"])
+        self.appendToolbar("Roof Truss", ["KingPost","QueenPost","MonoA","MonoB","CruckBlade","Assymetric","Inverted","OpenPlan","Storage"])
         self.appendToolbar("Testing", ["Stringer_Sketch", "Rafter_Sketch"])
 
-        self.appendToolbar("FramingReload", ["FramingReload"])
+        self.appendToolbar("Utilities", ["FramingReload","FloorPlanView"])
 
         print( "Stickframe check ????")
         Log ("The StickFrame Module Initialize method has been run \n")

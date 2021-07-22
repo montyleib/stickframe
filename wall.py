@@ -1,7 +1,7 @@
 import FreeCAD,FreeCADGui,Part, Draft
 import os, math
 from pivy import coin
-import stud, plate, studspacer, framing
+import stud, plate, studspacer, framing, simplewall
 
 __title__="FreeCAD Stick Framers Toolkit"
 __author__ = "Paul Randall"
@@ -10,14 +10,19 @@ __url__ = "http://www.mathcodeprint.com"
 __command_name__ = "Wall"
 __command_group__ = "Constructions"
 
-wall_type = ['Interior','Exterior','Load Bearing','Non-Load Bearing','Demising']
+wall_type = ['Interior','Exterior','Load Bearing','Non-Load Bearing','Demising','KneeWall']
 #Not sure if room name makes any sense as most walls will be part of two rooms.
 wall_room = ['Living','Dining','Bedroom','Garage','Bathroom','Kitchen']
 wall_direction = ['North','South','East','West']
 
 def makeWall():
-	pass
+	newwall = FreeCAD.ActiveDocument.addObject("App::Part", "newwall")
+	Wall(newwall)
+	ViewProviderWall(newwall.ViewObject)
+	return newwall;
 
+
+	
 class Wall_Command:
 	""" The Wall object creates a container for all the items that make up
 	a stud wall.
@@ -60,21 +65,31 @@ class Wall_Command:
 		expressions = []
 
 		if framing.isItemSelected():
-			selection = FreeCADGui.Selection.getSelectionEx()
-			obj = selection[0].SubElementNames
-			edge_name = obj[0]
+#			selection = FreeCADGui.Selection.getSelectionEx()
+#			obj = selection[0].SubElementNames
+#			edge_name = obj[0]
 
 			#One Edge
-			edge_obj = FreeCADGui.Selection.getSelection()[0]
-			edge_shp = FreeCADGui.Selection.getSelection()[0].Shape
+#			edge_obj = FreeCADGui.Selection.getSelection()[0]
+#			edge_shp = FreeCADGui.Selection.getSelection()[0].Shape
 			
 
-			edge_elt = FreeCADGui.Selection.getSelection ()[0].Shape.Edge1
+#			edge_elt = FreeCADGui.Selection.getSelection ()[0].Shape.Edge1
 
-			if 	isinstance( edge_shp, Part.Wire ):	
-				partobj.Length = edge_elt.Length
-				FreeCAD.ActiveDocument.getObject(partobj.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
-				FreeCAD.ActiveDocument.getObject(partobj.Name).MapMode = 'OXY'
+#			if 	isinstance( edge_shp, Part.Wire ):	
+#				partobj.Length = edge_elt.Length
+#				FreeCAD.ActiveDocument.getObject(partobj.Name).Support = [(edge_obj,'Vertex1'),(edge_obj,edge_name)]
+#				FreeCAD.ActiveDocument.getObject(partobj.Name).MapMode = 'OXY'
+
+
+			if framing.defaultAttachment(partobj ): 				
+				pass
+			else:
+				#mULTIEDGE ATTACHMENT
+				pass
+								
+		
+						
 
 		#retrieve lumber dimensions
 		#TODO: Actually get the values from a settings location
@@ -257,6 +272,9 @@ class Wall_Command:
 
 		FreeCAD.ActiveDocument.recompute()
 		FreeCADGui.SendMsgToActiveView("ViewFit")	
+		
+		print ( partobj.Name )
+
 
 class Wall:
 	def __init__(self, obj):
